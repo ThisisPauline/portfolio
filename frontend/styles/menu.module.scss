@@ -72,3 +72,14 @@
       matrix3d(1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 10, 10, 0, 1.1);
   }
   
+
+  .burger{
+  min-height: 100vh;
+  background-repeat: repeat;
+
+  background-image: radial-gradient(
+      at 77% 27%,
+      hsla(231, 88%, 92%, 0.4) 0px,
+      transparent 100%
+    ),
+    url("noise.svg");}
