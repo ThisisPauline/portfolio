@@ -1,0 +1,66 @@
+.linkWhite:after {
+    width: 100%;
+    content: "";
+    display: block;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .linkWhite:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .linkWhite:after {
+    width: 100%;
+    content: "";
+    display: block;
+    height: 2px;
+    background: #0C26CD;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .linkBlack:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .linkBlack:after {
+    width: 100%;
+    content: "";
+    display: block;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .linkWhite:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .donutTurn{
+    position: relative;
+    margin: auto;
+    animation: move 5s 0s infinite cubic-bezier(.98,.98,.83,.67) alternate-reverse;
+  }
+
+  @keyframes move {
+    0%  {    
+      transform:rotate(45deg);
+    }
+    25%  {
+      transform:rotate(135deg);
+    }
+    50%  {
+      transform:rotate(180deg);
+    }
+    75%  { 
+        transform:rotate(315deg);
+    }
+    100% {  
+  
+      transform:rotate(404deg);
+    }
+  }
