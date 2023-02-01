@@ -34,7 +34,7 @@ export default function BurgerMenu(props: MenuPropTypes) {
             <div className=" flex flex-col text-[#0C26CD] pt-0 w-[80%] justify-center ">
               <div className="flex flex-row justify-end mt-[3%] mr-[68px] pr-0 pt-0w-100 absolute top-0 right-0 mb-[3%] ">
                 <button
-                  className={`text-[36px] ${styles["linkWhite"]}`}
+                  className={`text-[36px] font-bold ${styles["linkWhite"]}`}
                   onClick={handleOnClick}
                 >
                   Close

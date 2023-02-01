@@ -64,3 +64,11 @@
       transform:rotate(404deg);
     }
   }
+
+  .donutHover:hover{
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform: rotate3d(2, 1, 1, 1deg)
+      matrix3d(1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 10, 10, 0, 1.1);
+  }
+  
