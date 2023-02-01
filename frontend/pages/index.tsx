@@ -32,17 +32,18 @@ export default function Home() {
               <ButtonBlack label="About me" />
             </Link>
           </div>
-          <div className="flex items-center justify-center absolute z-1">
+          <div className="flex w-screen items-center justify-center absolute z-1">
             <MouseParallaxContainer
-              globalFactorX={0.7}
-              globalFactorY={0.7}
+              globalFactorX={0.4}
+              globalFactorY={0.4}
               useWindowMouseEvents={true}
             >
-              <MouseParallaxChild factorX={0.9} factorY={0.9}>
+              <MouseParallaxChild factorX={0.3} factorY={0.3}>
                 <Image
                   src={donutWhiteXL}
                   alt="donut White Background"
-                  className="w-[500px]"
+                  width={500}
+                  className="w-full"
                 />
               </MouseParallaxChild>
             </MouseParallaxContainer>
