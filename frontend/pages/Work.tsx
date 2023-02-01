@@ -2,6 +2,7 @@ import { Inter } from "@next/font/google";
 import Header from "@/components/Header";
 import ButtonBlack from "@/components/ButtonInner";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function Home() {
           <p className="text-[20px] ">02</p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

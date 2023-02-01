@@ -4,6 +4,7 @@ import ButtonBlack from "@/components/ButtonInner";
 import Link from "next/link";
 import profilePicture from "../assets/profilePicture.png";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function About() {
           <p className="underline font-bold text-3xl">Download my cv</p>
         </Link>
       </div>
+      <Footer />
     </>
   );
 }

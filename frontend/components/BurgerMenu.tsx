@@ -19,7 +19,7 @@ export default function BurgerMenu(props: MenuPropTypes) {
         ""
       ) : (
         <div>
-          <div className="bg-white h-screen sticky z-20 flex">
+          <div className=" h-screen sticky z-20 flex">
             <div className=" bg-[#0C26CD] h-screen w-[35%] flex items-center justify-center ">
               <Link href="/">
                 <Image

@@ -1,7 +1,8 @@
 const express = require("express");
-const projectsHandlers = express.Router();
 const projectsRouter = express.Router();
 
-projectsRouter.get("/", projectsHandlers.getAllProjects);
+import { getAllProjects } from "./projectsHandlers";
+
+projectsRouter.get("/", getAllProjects);
 
 module.exports = projectsRouter;

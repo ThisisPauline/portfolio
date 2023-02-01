@@ -1,6 +1,6 @@
-const database = require("../database");
+import database from "../database"
 
-const getAllProjects = (req: any, res: any) => {
+export const getAllProjects = (req: any, res: any) => {
   database
     .query("SELECT * FROM projects")
     .then((result: any[]) => {
@@ -12,7 +12,3 @@ const getAllProjects = (req: any, res: any) => {
     });
 };
 
-
-module.exports = {
-  getAllProjects,
-};

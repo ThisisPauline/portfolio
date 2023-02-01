@@ -5,8 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const EXPRESS_PORT = parseInt(process.env.EXPRESS_PORT ?? "5005", 10);
 
-const database = require("./database");
-
+import database from "./database";
 
 const app = express();
 
