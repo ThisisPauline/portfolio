@@ -53,7 +53,7 @@ export default function BurgerMenu(props: MenuPropTypes) {
                 </div>
                 <div className={styles.linkWhite}>
                   <Link
-                    href="/work"
+                    href="/Work"
                     className="flex items-baseline"
                     onClick={handleOnClick}
                   >
