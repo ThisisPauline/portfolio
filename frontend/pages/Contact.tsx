@@ -33,14 +33,14 @@ export default function Contact() {
             Social media
           </h2>
           <div className="flex flex-col desktop:gap-[30px]  w-[420px]">
-            <Link href="mailto:kraus.pauline@gmail.com">
+            <Link target="_blank" href="https://github.com/ThisisPauline">
               <ButtonOut label="GitHub" />
             </Link>
-            <Link href="mailto:kraus.pauline@gmail.com">
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/in/pauline-kraus/"
+            >
               <ButtonOut label="LinkedIn" />
-            </Link>
-            <Link href="mailto:kraus.pauline@gmail.com">
-              <ButtonOut label="Instagram" />
             </Link>
           </div>
         </div>

@@ -20,14 +20,12 @@ export default function ProjectDetails() {
   const backendURL = "http://localhost:5005";
 
   useEffect(() => {
+    if (id == null) return;
     axios
       .get(`${backendURL}/projects/${id}`)
       .then((response) => response.data)
       .then((data) => setProject(data));
   }, [id]);
-
-  // fecth date :id in a use effet store data u state to render comp.
-  //and loading if not ready
 
   console.log(project);
 
@@ -53,11 +51,11 @@ export default function ProjectDetails() {
             </h1>
           </div>
 
-          <div className="flex flex-row justify-evenly items-center min-h-[400px]">
-            <p className="not-italic flex items-center font-light text-3xl text-left text-black flex-1 w-[50%] pr-[4%] mr-[2%] border-r-2 pb-4 border-black min-h-[350px]">
+          <div className="flex flex-row justify-between items-center min-h-[400px]">
+            <p className="not-italic flex items-center font-light text-3xl text-left text-black w-[50%] pr-[4%] border-r-2 pb-4 border-black min-h-[350px]">
               {project[0].description}
             </p>
-            <div className="flex flex-col min-h-[400px] justify-evenly">
+            <div className="flex flex-col min-h-[400px] justify-evenly w-[50%] ml-[2%]">
               <div className="flex flex-row justify-between">
                 <p className="font-bold text-3xl text-[#0C26CD]">Year</p>
                 <p className="not-italic font-light text-3xl text-right text-black">
@@ -84,33 +82,46 @@ export default function ProjectDetails() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row items-center justify-center gap-20 mt-[5%]">
+
+          <div className="flex flex-row items-center justify-center  mt-[5%] mb-[5%]">
             <div className="flex-1">
-              <Link href={`${project[0].repoLink}`}>
-                <ButtonOut label="View the repo" />
-              </Link>
+              {project[1].siteLink !== null ? (
+                <div>
+                  <Link target="_blank" href={project[0].siteLink}>
+                    <ButtonOut label="View the website" />
+                  </Link>
+                </div>
+              ) : (
+                <div></div>
+              )}
             </div>
             <div className="flex-1">
-              <Link
-                href={`
-              $project[0].siteLink}`}
-              >
-                <ButtonOut label="View it live" />
-              </Link>
+              {project[1].repoLink !== null ? (
+                <div>
+                  <Link target="_blank" href={project[0].repoLink}>
+                    <ButtonOut label="View the repo" />
+                  </Link>
+                </div>
+              ) : (
+                <div></div>
+              )}
             </div>
           </div>
         </div>
-        <div className="flex flex-row mb-[5%] h-[600]">
+        <div className="flex flex-row mb-[5%] w-full">
           {project.slice(1, project.length).map((image) => {
             return (
-              <li className="list-none object-cover h-[600]" key={image.id}>
-                <div>
+              <li className="list-none" key={image.index}>
+                <div
+                  id="container"
+                  className="flex justify-center items-center w-full"
+                >
                   <Image
                     src={image.url}
                     alt="image project"
                     width={3000}
                     height={3000}
-                    className="h-[600] object-cover"
+                    className="w-[600px] h-[450px] object-cover"
                   />
                 </div>
               </li>
