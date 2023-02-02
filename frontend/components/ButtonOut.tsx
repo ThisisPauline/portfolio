@@ -8,9 +8,11 @@ export interface ButtonPropTypes {
 
 export default function ButtonOut(props: ButtonPropTypes) {
   return (
-    <div className="flex gap-[10px]">
+    <div className="flex gap-3 desktop:gap-[10px]">
       <Image src={arrowUp} alt="outterLink" />
-      <button className={`font-medium text-3xl ${styles["linkWhite"]}`}>
+      <button
+        className={`font-medium text-[18px]  desktop:text-3xl ${styles["linkWhite"]}`}
+      >
         {props.label}
       </button>
     </div>

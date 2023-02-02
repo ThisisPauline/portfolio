@@ -29,10 +29,12 @@ export default function Work() {
   return (
     <>
       <Header />
-      <div className="flex flex-col items-start justify-center min-h-screen mr-[60px] mt-[150px] ml-[60px]">
+      <div className="flex flex-col items-start justify-center min-h-screen desktop:mr-[60px] desktop:ml-[60px] mr-[26px] ml-[26px] mt-[150px] ">
         <div className="flex items-end justify-between w-full border-b-2 pb-4 border-black ">
-          <h1 className="text-[80px] font-bold z-10 -mb-7">Work</h1>
-          <p className="text-[20px] ">02</p>
+          <h1 className="desktop:text-[80px] font-bold z-10 desktop:-mb-7 -mb-3 text-[40px]">
+            Work
+          </h1>
+          <p className="desktop:text-[20px] text-[16px]">02</p>
         </div>
 
         <div className="w-full">
@@ -40,15 +42,19 @@ export default function Work() {
             {work.map((project) => {
               return (
                 <li className="" key={project.id}>
-                  <div className="flex flex-row justify-between text-[30px] items-center border-b-2 pb-6 pt-6 border-black">
-                    <div className="flex flex-row gap-3 items-center">
-                      <Image src={arrowRight} alt="arrow" />
-                      <div className="text-bold font-medium">
-                        {project.projectName}
+                  <Link href="">
+                    <div className="flex flex-col desktop:flex-row justify-between  desktop:text-[30px] text-[20px]items-start desktop:items-center border-b-2 pb-6 pt-6 border-black">
+                      <div className="flex flex-row gap-3 items-center">
+                        <Image src={arrowRight} alt="arrow" />
+                        <div className="text-bold font-medium">
+                          {project.projectName}
+                        </div>
+                      </div>
+                      <div className="desktop:ml-0 ml-[36px]">
+                        {project.stack}
                       </div>
                     </div>
-                    <div>{project.stack}</div>
-                  </div>
+                  </Link>
                 </li>
               );
             })}

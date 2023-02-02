@@ -16,15 +16,23 @@ export default function Home() {
     <>
       <Header />
       <div>
-        <div className="flex flex-col items-center justify-center min-h-screen">
-          <h1 className="text-[96px] font-bold z-10 -mb-7">Hi!</h1>
-          <h1 className="text-[96px] font-bold z-10 mt-0">
-            I&apos;m <span className="text-[#0C26CD]">Pauline</span>
+        <div className="flex flex-col text-left desktop:items-center justify-center min-h-screen ">
+          <h1 className="pl-[30px] desktop:ml-0  desktop:text-[96px] font-bold z-10 desktop:-mb-7 -mb-4 text-[60px]">
+            Hi!
           </h1>
-          <p className="text-[40px] w-[40%] text-center mb-[44px] z-10">
+          <h1 className="hidden desktop:inline pl-[30px] desktop:ml-0  desktop:text-[96px] desktop:font-bold desktop:z-10 desktopmt-0 text-[60px]">
+            I&apos;m <span className="text-[#0C26CD] ">Pauline</span>
+          </h1>
+          <h1 className="desktop:hidden pl-[30px]  font-bold z-10  -mb-4 text-[60px]">
+            I'm
+          </h1>
+          <h1 className="desktop:hidden pl-[30px]  font-bold z-10  -mb-4 text-[70px] text-[#0C26CD]">
+            Pauline
+          </h1>
+          <p className="pl-[30px] desktop:ml-0 text-left desktop:text-[40px] desktop:w-[40%] desktop:text-center mb-[44px] z-10 text-[20px] w-[100%]">
             A bilingual Frontend Web Developer keen on design.
           </p>
-          <div className="flex items-center justify-center gap-[10%] w-full z-10">
+          <div className="pl-[30px] desktop:ml-0 flex desktop:flex-row flex-col desktop:items-center justify-around desktop:justify-center gap-5 desktop:gap-[10%] w-full z-10">
             <Link href="/Work">
               <ButtonBlack label="See my projects" />
             </Link>
@@ -32,7 +40,7 @@ export default function Home() {
               <ButtonBlack label="About me" />
             </Link>
           </div>
-          <div className="flex w-screen items-center justify-center absolute z-1">
+          <div className="hidden desktop:flex w-screen items-center justify-center absolute z-1">
             <MouseParallaxContainer
               globalFactorX={0.4}
               globalFactorY={0.4}
@@ -47,6 +55,14 @@ export default function Home() {
                 />
               </MouseParallaxChild>
             </MouseParallaxContainer>
+          </div>
+          <div className="desktop:hidden flex w-screen items-center justify-center absolute z-1">
+            <Image
+              src={donutWhiteXL}
+              alt="donut White Background"
+              width={500}
+              className="w-full"
+            />
           </div>
         </div>
       </div>
