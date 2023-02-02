@@ -10,6 +10,7 @@
 html,
 body {
   min-height: 100vh;
+  min-width: 100vw;
   background-repeat: repeat;
 
   background-image: radial-gradient(
@@ -27,6 +28,7 @@ body {
   color: white;
   background: #0C26CD;
 }
+
 
 
 

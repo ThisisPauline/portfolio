@@ -1,14 +1,18 @@
 import express from "express";
 const projectsRouter = require("./projects/projectsRouter");
 
+
 import dotenv from "dotenv";
 dotenv.config();
 const EXPRESS_PORT = parseInt(process.env.EXPRESS_PORT ?? "5005", 10);
 
 import database from "./database";
 
-const app = express();
 
+const app = express();
+const cors = require("cors");
+
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -33,6 +37,7 @@ app.get("/", (req, res) => {
   });
 
   app.use("/projects", projectsRouter);
+
  
 
 

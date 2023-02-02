@@ -9,6 +9,10 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      desktop: "705px",
+      // => @media (min-width: 705px) { ... }
+    },
     extend: {},
   },
   plugins: [],

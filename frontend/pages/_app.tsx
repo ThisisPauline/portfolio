@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
           hasBlendMode={true}
         />
       )}
+
       <Component {...pageProps} />
     </>
   );

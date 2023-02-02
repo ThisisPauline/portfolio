@@ -8,7 +8,9 @@ export default function Footer() {
       <Link href="/">
         <Image src={donutBlue} alt="donnut blue footer" className="w-[50px]" />
       </Link>
-      <p>Made with love by Pauline Kraus, 2023</p>
+      <p className="text-[12px] desktop:text-[16px]">
+        Made with love by Pauline Kraus, 2023.
+      </p>
     </div>
   );
 }
