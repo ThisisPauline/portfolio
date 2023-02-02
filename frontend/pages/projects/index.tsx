@@ -34,7 +34,7 @@ export default function Work() {
       <div className="flex flex-col items-start justify-center min-h-screen desktop:mr-[60px] desktop:ml-[180px] mr-[26px] ml-[26px] mt-[150px] ">
         <div className="flex items-end justify-between w-full border-b-2 pb-4 border-black ">
           <h1 className="desktop:text-[80px] font-bold z-10 desktop:-mb-7 -mb-3 text-[40px]">
-            Work
+            My projects
           </h1>
           <p className="desktop:text-[20px] text-[16px]">02</p>
         </div>

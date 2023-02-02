@@ -33,7 +33,7 @@ export default function Header() {
             />
           </Link>
           <button
-            className={`text-[24px] desktop:text-[36px] font-bold ${styles["linkBlack"]}`}
+            className={`text-[24px] desktop:text-[36px] underline desktop:no-underline font-bold ${styles["linkBlack"]}`}
             onClick={handleOnClick}
           >
             Menu

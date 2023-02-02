@@ -34,7 +34,7 @@ export default function BurgerMenu(props: MenuPropTypes) {
             <div className=" flex flex-col text-[#0C26CD] pt-0 desktop:w-[80%] justify-center ">
               <div className="flex flex-row justify-end mt-[3%] mr-4 desktop:mr-[68px] pr-0 pt-0w-100 absolute top-0 right-0 mb-[3%] ">
                 <button
-                  className={`text-white text-[24px] underline desktop:no-underline desktop:text-[36px] desktop:text-[#0C26CD] font-bold ${styles["linkWhite"]}`}
+                  className={`desktop:mt-5  h-[100px] justify-between pl-[5px] desktop:pl-[18px] desktop:pr-[40px] pr-[20px]  absolute top-0   text-white text-[24px]  underline desktop:no-underline desktop:text-[36px] desktop:text-[#0C26CD] font-bold ${styles["linkWhite"]}`}
                   onClick={handleOnClick}
                 >
                   Close
@@ -61,7 +61,7 @@ export default function BurgerMenu(props: MenuPropTypes) {
                   >
                     <p className="text-[20px] mr-5">02</p>
                     <p className="underline text-[50px] font-bold   desktop:no-underline">
-                      Work
+                      Projects
                     </p>
                   </Link>
                 </div>
