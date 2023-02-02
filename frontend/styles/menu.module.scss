@@ -84,4 +84,11 @@
     ),
     url("noise.svg");}
 
+    .mainHeading{
+      font-size: clamp(4.375rem, 3.8125rem + 2.5vw, 6rem);
+    }
+
+    .sub{
+      font-size: clamp(1.25rem, 0.8173rem + 1.9231vw, 2.5rem);
+    }
   

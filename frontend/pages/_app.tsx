@@ -2,11 +2,9 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import AnimatedCursor from "react-animated-cursor";
 import { useState, useEffect } from "react";
-import { WorkContext, initialWorkState } from "../context/WorkContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [domLoaded, setDomLoaded] = useState(false);
-  const [workStatus, setWorkStatus] = useState(initialWorkState);
 
   useEffect(() => {
     setDomLoaded(true);
@@ -29,9 +27,8 @@ export default function App({ Component, pageProps }: AppProps) {
           hasBlendMode={true}
         />
       )}
-      <WorkContext.Provider value={{ workStatus, setWorkStatus }}>
-        <Component {...pageProps} />
-      </WorkContext.Provider>
+
+      <Component {...pageProps} />
     </>
   );
 }

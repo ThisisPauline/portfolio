@@ -1,6 +1,7 @@
 import express from "express";
 const projectsRouter = require("./projects/projectsRouter");
 
+
 import dotenv from "dotenv";
 dotenv.config();
 const EXPRESS_PORT = parseInt(process.env.EXPRESS_PORT ?? "5005", 10);
@@ -36,6 +37,7 @@ app.get("/", (req, res) => {
   });
 
   app.use("/projects", projectsRouter);
+
  
 
 
