@@ -2,7 +2,7 @@ import database from "../database"
 
 export const getAllProjects = (req: any, res: any) => {
   database
-    .query("SELECT * FROM projects")
+    .query("SELECT * FROM projectSpecs")
     .then((result: any[]) => {
       res.status(200).json(result[0]);
     })

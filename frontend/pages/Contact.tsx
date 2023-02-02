@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <div>
       <Header />
-      <div className="flex flex-col items-start justify-center min-h-screen mt-[100px] mr-[60px] ml-[60px]">
+      <div className="flex flex-col items-start justify-center min-h-screen mt-[150px] mr-[60px] ml-[60px]">
         <div className="flex items-end justify-between w-full border-b-2 pb-4 border-black ">
           <h1 className="text-[80px] font-bold z-10 -mb-7">Contact</h1>
           <p className="text-[20px] ">05</p>

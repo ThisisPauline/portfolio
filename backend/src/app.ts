@@ -7,8 +7,11 @@ const EXPRESS_PORT = parseInt(process.env.EXPRESS_PORT ?? "5005", 10);
 
 import database from "./database";
 
-const app = express();
 
+const app = express();
+const cors = require("cors");
+
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
