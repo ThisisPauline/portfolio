@@ -3,30 +3,37 @@ import type { AppProps } from "next/app";
 import AnimatedCursor from "react-animated-cursor";
 import { useState, useEffect, CSSProperties } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
+import { BounceLoader } from "react-spinners";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [domLoaded, setDomLoaded] = useState(false);
+  let [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      console.log("Retardée d'une seconde.");
-    }, 3000);
-    setDomLoaded(true);
-  }, []);
+      setDomLoaded(true);
+      setLoading(loading);
+    }, 1500);
+  }, [loading]);
 
   const override: CSSProperties = {
-    display: "block",
-    margin: "0 auto",
+    display: "flex",
+    justifyItems: "center",
+    alignItems: "center",
+    marginTop: "300px",
+    marginLeft: "40%",
     borderColor: "#0C26CD",
+    width: "100vw",
     height: "100vh",
+    zIndex: "500",
+    overflowY: "hidden",
   };
 
-  let [loading, setLoading] = useState(true);
   let [color, setColor] = useState("#0C26CD");
   return (
     <>
       {!domLoaded ? (
-        <ClipLoader
+        <BounceLoader
           color={color}
           loading={loading}
           cssOverride={override}

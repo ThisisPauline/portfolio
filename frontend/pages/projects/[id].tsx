@@ -9,7 +9,7 @@ import Image from "next/image";
 import ButtonOut from "@/components/ButtonOut";
 import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
+import { BounceLoader } from "react-spinners";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,27 +45,7 @@ export default function ProjectDetails() {
     return () => container.removeEventListener("wheel", wheelListener);
   }, [photoScrollContainerRef.current]);
 
-  const override: CSSProperties = {
-    display: "block",
-    margin: "0 auto",
-    borderColor: "#0C26CD",
-    height: "100vh",
-  };
-
-  let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("#ffffff");
-
-  if (project.length == 0)
-    return (
-      <ClipLoader
-        color={color}
-        loading={loading}
-        cssOverride={override}
-        size={150}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />
-    );
+  if (project.length == 0) return <BounceLoader />;
 
   return (
     <div className="w-screen">
@@ -96,7 +76,7 @@ export default function ProjectDetails() {
                 <p className="font-bold text-[18px] desktop:text-3xl text-[#0C26CD]">
                   Year
                 </p>
-                <p className="not-italic font-light text-[18px] font-[100] desktop:text-3xl text-right text-black">
+                <p className="not-italic  text-[18px] font-[100] desktop:text-3xl text-right text-black">
                   {project[0].year}
                 </p>
               </div>

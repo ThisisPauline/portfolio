@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import arrowRight from "../../assets/arrow-right.svg";
 import Image from "next/image";
-import ClipLoader from "react-spinners/ClipLoader";
+import BounceLoader from "react-spinners/ClipLoader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,29 +25,7 @@ export default function Work() {
       .then((data) => setWork(data));
   }, []);
 
-  console.log(work);
-
-  const override: CSSProperties = {
-    display: "block",
-    margin: "0 auto",
-    borderColor: "#0C26CD",
-    height: "100vh",
-  };
-
-  let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("#ffffff");
-
-  if (work.length == 0)
-    return (
-      <ClipLoader
-        color={color}
-        loading={loading}
-        cssOverride={override}
-        size={150}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />
-    );
+  if (work.length == 0) return <BounceLoader />;
 
   return (
     <>
