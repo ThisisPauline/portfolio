@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import AnimatedCursor from "react-animated-cursor";
 import { useState, useEffect, CSSProperties } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
 import { BounceLoader } from "react-spinners";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -43,15 +42,14 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       ) : (
         <AnimatedCursor
-          color="12, 38, 205"
+          color="222, 145, 81"
           innerSize={10}
           outerSize={40}
           innerScale={1}
           outerScale={1.9}
           outerAlpha={0}
           outerStyle={{
-            border: "2px solid #0C26CD",
-            mixBlendMode: "exclusion",
+            border: "2px solid #de9151",
           }}
           hasBlendMode={true}
         />

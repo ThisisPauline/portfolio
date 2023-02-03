@@ -1,6 +1,5 @@
 import { Inter } from "@next/font/google";
 import Header from "@/components/Header";
-import ButtonBlack from "@/components/ButtonInner";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from "react";

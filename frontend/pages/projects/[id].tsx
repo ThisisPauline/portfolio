@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import React from "react";
-import styles from "../../styles/menu.module.scss";
 import axios from "axios";
 import Image from "next/image";
 import ButtonOut from "@/components/ButtonOut";
