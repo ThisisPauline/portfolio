@@ -47,7 +47,7 @@ export default function Work() {
                       <div className="flex flex-row gap-3 items-center">
                         <Image src={arrowRight} alt="arrow" />
                         <div className="text-bold  font-medium">
-                          {project.projectName}
+                          {project.projectTag}
                         </div>
                       </div>
                       <div className="desktop:ml-0 font-[100] ml-[36px]">
