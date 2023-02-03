@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import arrowRight from "../../assets/arrow-right.svg";
 import Image from "next/image";
+import BounceLoader from "react-spinners/ClipLoader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,19 +25,17 @@ export default function Work() {
       .then((data) => setWork(data));
   }, []);
 
-  console.log(work);
-
-  if (work.length == 0) return <p className="">Loading...</p>;
+  if (work.length == 0) return <BounceLoader />;
 
   return (
     <>
       <Header />
       <div className="flex flex-col items-start justify-center min-h-screen desktop:mr-[60px] desktop:ml-[180px] mr-[26px] ml-[26px] mt-[150px] ">
         <div className="flex items-end justify-between w-full border-b-2 pb-4 border-black ">
-          <h1 className="desktop:text-[80px] font-bold z-10 desktop:-mb-7 -mb-3 text-[40px]">
+          <h1 className="desktop:text-[80px] font-bold z-10  -mb-3 text-[40px]">
             My projects
           </h1>
-          <p className="desktop:text-[20px] text-[16px]">02</p>
+          <p className="desktop:text-[20px] font-[100] text-[16px]">02</p>
         </div>
 
         <div className="w-full">
@@ -48,11 +47,11 @@ export default function Work() {
                     <div className="flex flex-col desktop:flex-row justify-between  desktop:text-[30px] text-[20px]items-start desktop:items-center border-b-2 pb-6 pt-6 border-black">
                       <div className="flex flex-row gap-3 items-center">
                         <Image src={arrowRight} alt="arrow" />
-                        <div className="text-bold font-medium">
+                        <div className="text-bold  font-medium">
                           {project.projectName}
                         </div>
                       </div>
-                      <div className="desktop:ml-0 ml-[36px]">
+                      <div className="desktop:ml-0 font-[100] ml-[36px]">
                         {project.stack}
                       </div>
                     </div>
