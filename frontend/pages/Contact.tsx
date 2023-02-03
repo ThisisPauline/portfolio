@@ -11,9 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Contact() {
   return (
-    <div className="min-w-screen">
+    <div className="min-w-screen  ">
       <Header />
-      <div className="flex flex-col items-start justify-start desktop:justify-center min-h-screen mt-[150px] desktop:mr-[60px] desktop:ml-[180px] mr-[26px] ml-[26px]">
+      <div className="flex mt-[150px] flex-col items-start justify-start  min-h-screen mt-[150px] desktop:mr-[60px] desktop:ml-[180px] mr-[26px] ml-[26px]">
         <div className="flex items-end justify-between w-full border-b-2 pb-4 border-black ">
           <h1 className="text-[40px] desktop:text-[80px] font-bold z-10 desktop:-mb-7 -mb-3">
             Contact
