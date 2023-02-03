@@ -17,10 +17,10 @@ export default function About() {
           <h1 className="text-[40px] desktop:text-[80px] font-bold z-10 desktop:-mb-7 -mb-3">
             About
           </h1>
-          <p className="text-[16px] desktop:text-[20px] ">03</p>
+          <p className="text-[16px] font-[100] desktop:text-[20px] ">03</p>
         </div>
         <div className="flex flex-col-reverse desktop:flex-row mt-[5%]">
-          <p className="mt-[8%] desktop:mt-0 font-light text-[18px] desktop:text-3xl desktop:leading-9 flex-1 mr-[2%]">
+          <p className="mt-[8%] mb-[5%] desktop:mt-0 text-[18px] font-[100] desktop:text-3xl desktop:leading-9 flex-1 mr-[2%]">
             Born in Paris, I’ve lived in the south of Spain for the past four
             years and am now looking to settle in Berlin. Adapting to living in
             a foreign country gave me the skills to push myself outside of my
@@ -29,7 +29,13 @@ export default function About() {
             Developer. Now, I’m looking for a junior position as a Frontend
             Developer as my passion lies in pixel perfect designs.{" "}
           </p>
-          <Image src={profilePicture} alt="Pauline Kraus" />
+          <div className="flex flex-1 justify-center items-center">
+            <Image
+              src={profilePicture}
+              alt="Pauline Kraus"
+              className=" w-[400px] h-[400]"
+            />
+          </div>
         </div>
         <Link
           target="_blank"

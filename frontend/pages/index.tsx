@@ -39,7 +39,7 @@ export default function Home() {
             Pauline
           </h1>
           <p
-            className={`pl-[30px] desktop:ml-0 text-left desktop:text-[40px] desktop:w-[40%] desktop:text-center mb-[44px] z-10 text-[20px] w-[100%] ${styles["sub"]}`}
+            className={`pl-[30px] desktop:ml-0 text-left desktop:text-[40px] desktop:w-[40%] font-[100] desktop:text-center mb-[44px] z-10 text-[20px] w-[100%] ${styles["sub"]}`}
           >
             A Frontend&#160;Web Developer keen on&#160;UI&#160;and&#160;design.
           </p>

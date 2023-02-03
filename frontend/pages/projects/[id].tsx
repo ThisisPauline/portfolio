@@ -9,6 +9,7 @@ import Image from "next/image";
 import ButtonOut from "@/components/ButtonOut";
 import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,7 +45,27 @@ export default function ProjectDetails() {
     return () => container.removeEventListener("wheel", wheelListener);
   }, [photoScrollContainerRef.current]);
 
-  if (project.length == 0) return <p className="">Loading...</p>;
+  const override: CSSProperties = {
+    display: "block",
+    margin: "0 auto",
+    borderColor: "#0C26CD",
+    height: "100vh",
+  };
+
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#ffffff");
+
+  if (project.length == 0)
+    return (
+      <ClipLoader
+        color={color}
+        loading={loading}
+        cssOverride={override}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    );
 
   return (
     <div className="w-screen">
@@ -67,7 +88,7 @@ export default function ProjectDetails() {
           </div>
 
           <div className="flex desktop:flex-row flex-col-reverse gap-10 desktop:gap-0 justify-between items-center desktop:min-h-[600px]">
-            <p className="not-italic flex desktop:items-center font-light text-[18px] desktop:text-3xl desktop:text-left text-black desktop:w-[50%] desktop:pr-[4%] desktop:border-r-2 pb-4 desktop:border-black desktop:min-h-[350px]">
+            <p className="not-italic flex desktop:items-center desktop:font-[100] font-[100] text-[18px] desktop:text-3xl desktop:text-left text-black desktop:w-[50%] desktop:pr-[4%] desktop:border-r-2 pb-4 desktop:border-black desktop:min-h-[350px]">
               {project[0].description}
             </p>
             <div className="flex flex-col desktop:min-h-[400px] min-h-[250px] justify-around desktop:justify-evenly desktop:w-[50%] w-full desktop:ml-[2%]">
@@ -75,7 +96,7 @@ export default function ProjectDetails() {
                 <p className="font-bold text-[18px] desktop:text-3xl text-[#0C26CD]">
                   Year
                 </p>
-                <p className="not-italic font-light text-[18px] desktop:text-3xl text-right text-black">
+                <p className="not-italic font-light text-[18px] font-[100] desktop:text-3xl text-right text-black">
                   {project[0].year}
                 </p>
               </div>
@@ -83,7 +104,7 @@ export default function ProjectDetails() {
                 <p className="font-bold text-[18px] desktop:text-3xl text-[#0C26CD]">
                   Client
                 </p>
-                <p className="not-italic font-light text-[18px] desktop:text-3xl text-right text-black">
+                <p className="not-italic font-[100] text-[18px] desktop:text-3xl text-right text-black">
                   {project[0].client}
                 </p>
               </div>
@@ -91,7 +112,7 @@ export default function ProjectDetails() {
                 <p className="font-bold text-[18px] desktop:text-3xl text-[#0C26CD]">
                   Project
                 </p>
-                <p className="not-italic font-light text-[18px] desktop:text-3xl text-right text-black">
+                <p className="not-italic font-[100] text-[18px] desktop:text-3xl text-right text-black">
                   {project[0].projectType}
                 </p>
               </div>
@@ -99,7 +120,7 @@ export default function ProjectDetails() {
                 <p className="font-bold text-[18px] desktop:text-3xl text-[#0C26CD] mr-12">
                   Stack
                 </p>
-                <p className="not-italic font-light text-[18px] desktop:text-3xl text-right text-black">
+                <p className="not-italic font-[100] text-[18px] desktop:text-3xl text-right text-black">
                   {project[0].stack}
                 </p>
               </div>

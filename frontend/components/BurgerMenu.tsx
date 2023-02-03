@@ -20,7 +20,7 @@ export default function BurgerMenu(props: MenuPropTypes) {
       ) : (
         <div>
           <div className=" bg-[#0C26CD] h-screen sticky z-20 flex desktop:bg-inherit">
-            <div className="hidden desktop:flex bg-[#0C26CD] h-screen w-[35%] items-center justify-center ">
+            <div className="hidden desktop:flex bg-[#0C26CD] h-screen w-[50%] items-center justify-center ">
               <Link href="/">
                 <Image
                   src={donutBlueXL}
@@ -31,24 +31,26 @@ export default function BurgerMenu(props: MenuPropTypes) {
               </Link>
             </div>
 
-            <div className=" flex flex-col text-[#0C26CD] pt-0 desktop:w-[80%] justify-center ">
-              <div className="flex flex-row justify-end mt-[3%] mr-4 desktop:mr-[68px] pr-0 pt-0w-100 absolute top-0 right-0 mb-[3%] ">
+            <div className=" flex desktop:mt-[15px]  flex-col text-[#0C26CD] pt-0 desktop:w-[80%] justify-center ">
+              <div className="mr-4 h-[100px]  pr-0 pt-0 w-100 absolute top-0 right-0 mb-[3%] ">
                 <button
-                  className={`desktop:mt-5  h-[100px] justify-between pl-[5px] desktop:pl-[18px] desktop:pr-[40px] pr-[20px]  absolute top-0   text-white text-[24px]  underline desktop:no-underline desktop:text-[36px] desktop:text-[#0C26CD] font-bold ${styles["linkWhite"]}`}
+                  className={`desktop:mt-[48px] mt-[35px] justify-between pl-[5px] desktop:pl-[10px] desktop:pr-[20px] pr-[10px]   text-white text-[24px]  underline desktop:no-underline desktop:text-[36px] desktop:text-[#0C26CD] font-bold ${styles["linkWhite"]}`}
                   onClick={handleOnClick}
                 >
                   Close
                 </button>
               </div>
-              <div className="text-white text-[24px] desktop:no-underline desktop:text-[80px] desktop:text-[#0C26CD] ml-[5%] w-[320px]">
+              <div className="text-white text-[24px] desktop:no-underline  desktop:text-[#0C26CD] ml-[5%] w-[620px]">
                 <div className={styles.linkWhite}>
                   <Link
                     href="/"
                     className="flex items-baseline "
                     onClick={handleOnClick}
                   >
-                    <p className="text-[20px] mr-5 desktop:no-underline">01</p>
-                    <p className="underline text-[50px] font-bold   desktop:no-underline">
+                    <p className="text-[20px] mr-5 font-[100] desktop:no-underline">
+                      01
+                    </p>
+                    <p className="underline text-[50px] desktop:text-[80px] font-bold   desktop:no-underline">
                       Home
                     </p>
                   </Link>
@@ -59,8 +61,8 @@ export default function BurgerMenu(props: MenuPropTypes) {
                     className="flex items-baseline"
                     onClick={handleOnClick}
                   >
-                    <p className="text-[20px] mr-5">02</p>
-                    <p className="underline text-[50px] font-bold   desktop:no-underline">
+                    <p className="text-[20px] font-[100] mr-5">02</p>
+                    <p className="underline text-[50px] font-bold desktop:text-[80px]  desktop:no-underline">
                       Projects
                     </p>
                   </Link>
@@ -71,8 +73,8 @@ export default function BurgerMenu(props: MenuPropTypes) {
                     className="flex items-baseline"
                     onClick={handleOnClick}
                   >
-                    <p className="text-[20px] mr-5">03</p>
-                    <p className="underline text-[50px] font-bold   desktop:no-underline">
+                    <p className="text-[20px] font-[100] mr-5">03</p>
+                    <p className="underline text-[50px] font-bold desktop:text-[80px]  desktop:no-underline">
                       About
                     </p>
                   </Link>
@@ -83,10 +85,12 @@ export default function BurgerMenu(props: MenuPropTypes) {
                     className="flex items-baseline"
                     onClick={handleOnClick}
                   >
-                    <p className={`text-[20px] mr-5 ${styles["linkWhite"]}`}>
+                    <p
+                      className={`text-[20px] font-[100] mr-5 ${styles["linkWhite"]}`}
+                    >
                       04
                     </p>
-                    <p className="underline text-[50px] font-bold  desktop:no-underline">
+                    <p className="underline text-[50px] font-bold desktop:text-[80px] desktop:no-underline">
                       Contact
                     </p>
                   </Link>

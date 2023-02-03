@@ -6,10 +6,12 @@
     background: white;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
+    box-sizing: content-box;
   }
   .linkWhite:hover:after {
     width: 100%;
     left: 0;
+    box-sizing: content-box;
   }
 
   .linkWhite:after {
@@ -20,10 +22,12 @@
     background: #0C26CD;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
+    box-sizing: content-box;
   }
   .linkBlack:hover:after {
     width: 100%;
     left: 0;
+    box-sizing: content-box;
   }
 
   .linkBlack:after {
@@ -34,10 +38,12 @@
     background: black;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
+    box-sizing: content-box;
   }
   .linkWhite:hover:after {
     width: 100%;
     left: 0;
+    box-sizing: content-box;
   }
 
   .donutTurn{
