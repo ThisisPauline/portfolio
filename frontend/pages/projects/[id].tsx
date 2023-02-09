@@ -112,7 +112,7 @@ export default function ProjectDetails() {
                   {project[0].projectType}
                 </p>
               </div>
-              <div className="flex flex-row justify-between ">
+              <div className="flex flex-row justify-between items-center ">
                 <p
                   className={`font-bold  text-[#0C26CD] mr-12 ${styles["paragraphe"]}`}
                 >
