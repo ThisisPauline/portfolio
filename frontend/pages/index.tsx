@@ -24,7 +24,7 @@ export default function Home() {
             Hi!
           </h1>
           <h1
-            className={`hidden desktop:inline pl-[30px] desktop:ml-0  desktop:text-[96px] desktop:font-bold desktop:z-10 desktopmt-0 text-[60px] ${styles["mainHeading"]}`}
+            className={`hidden desktop:inline pl-[30px] desktop:ml-0   desktop:font-bold desktop:z-10 desktopmt-0 ${styles["mainHeading"]}`}
           >
             I&apos;m <span className="text-[#0C26CD] ">Pauline</span>
           </h1>
@@ -34,12 +34,12 @@ export default function Home() {
             I'm
           </h1>
           <h1
-            className={`desktop:hidden pl-[30px] text-[#0C26CD] font-bold z-10  -mb-4 text-[70px]  ${styles["mainHeading"]}`}
+            className={`desktop:hidden pl-[30px] text-[#0C26CD] font-bold z-10  -mb-4  ${styles["mainHeading"]}`}
           >
             Pauline
           </h1>
           <p
-            className={`pl-[30px] desktop:ml-0 text-left desktop:text-[40px] desktop:w-[40%] font-[100] desktop:text-center mb-[44px] z-10 text-[20px] w-[100%] ${styles["sub"]}`}
+            className={`pl-[30px] desktop:ml-0 text-left  desktop:w-[40%] font-[100] desktop:text-center mb-[44px] z-10  w-[100%] ${styles["sub"]}`}
           >
             A Frontend&#160;Web Developer keen on&#160;UI&#160;and&#160;design.
           </p>
