@@ -7,11 +7,20 @@ import axios from "axios";
 import arrowRight from "../../assets/arrow-right.svg";
 import Image from "next/image";
 import BounceLoader from "react-spinners/ClipLoader";
+import styles from "../../styles/menu.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Work() {
   const [work, setWork] = useState([]);
+  const [image, setImage] = useState(false);
+
+  const handleMouseEnter = () => {
+    setImage(true);
+  };
+  const handleMouseLeave = () => {
+    setImage(false);
+  };
 
   const URI = "http://localhost:5005/projects";
 
@@ -26,15 +35,17 @@ export default function Work() {
 
   if (work.length == 0) return <BounceLoader />;
 
+  console.log(work);
+
   return (
     <>
       <Header />
       <div className="flex flex-col items-start justify-center min-h-screen desktop:mr-[60px] desktop:ml-[180px] mr-[26px] ml-[26px] mt-[150px] ">
         <div className="flex items-end justify-between w-full border-b-2 pb-4 border-black ">
-          <h1 className="desktop:text-[80px] font-bold z-10  -mb-3 text-[40px]">
+          <h1 className={` font-bold z-10  -mb-3 ${styles["h1"]}`}>
             My projects
           </h1>
-          <p className="desktop:text-[20px] font-[100] text-[16px]">02</p>
+          <p className={`font-[100] ${styles["number"]}`}>02</p>
         </div>
 
         <div className="w-full">
@@ -43,14 +54,28 @@ export default function Work() {
               return (
                 <li className="" key={project.id}>
                   <Link href={`/projects/${project.id}`}>
-                    <div className="flex flex-col desktop:flex-row justify-between  desktop:text-[30px] text-[20px]items-start desktop:items-center border-b-2 pb-6 pt-6 border-black">
+                    <div
+                      className={`flex flex-col desktop:flex-row justify-between items-start desktop:items-center border-b-2 pb-6 pt-6 border-black ${styles["h2"]}`}
+                    >
+                      {
+                        //TODO
+                        //{image ? (
+                        // <div>{project.id}</div>
+                        //) : (
+                        //  <div className="hidden" />
+                        //)}
+                      }
                       <div className="flex flex-row gap-3 items-center">
                         <Image src={arrowRight} alt="arrow" />
-                        <div className="text-bold  font-medium">
+                        <div
+                          className="text-bold  font-medium"
+                          onMouseEnter={handleMouseEnter}
+                          onMouseLeave={handleMouseLeave}
+                        >
                           {project.projectTag}
                         </div>
                       </div>
-                      <div className="desktop:ml-0 font-[100] ml-[36px]">
+                      <div className="desktop:ml-0 font-[100] text-right ml-[36px]">
                         {project.stack}
                       </div>
                     </div>

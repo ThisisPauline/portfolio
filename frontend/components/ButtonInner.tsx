@@ -10,9 +10,7 @@ export default function ButtonInner(props: ButtonPropTypes) {
   return (
     <div className="flex gap-3 deskop:gap-[10px]">
       <Image src={arrowRight} alt="innerLink" />
-      <button
-        className={`font-medium text-[18px] desktop:text-3xl ${styles["linkWhite"]}`}
-      >
+      <button className={`font-medium ${styles["linkWhite"]}`}>
         {props.label}
       </button>
     </div>

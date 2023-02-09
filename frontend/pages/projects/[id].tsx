@@ -9,6 +9,7 @@ import ButtonOut from "@/components/ButtonOut";
 import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
 import { BounceLoader } from "react-spinners";
+import styles from "../../styles/menu.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -61,45 +62,65 @@ export default function ProjectDetails() {
         </div>
         <div className="desktop:mr-[60px] desktop:ml-[188px] mr-[26px] ml-[26px]">
           <div className="flex items-end  w-full border-b-2 pb-4 border-black ">
-            <h1 className="text-[40px] desktop:text-[80px] font-bold z-10 desktop:-mb-7 -mb-3 mt-7">
+            <h1
+              className={`font-bold z-10 desktop:-mb-7 -mb-3 mt-7 ${styles["h1"]}`}
+            >
               {project[0].projectName}
             </h1>
           </div>
 
           <div className="flex desktop:flex-row flex-col-reverse gap-10 desktop:gap-0 justify-between items-center desktop:min-h-[600px]">
-            <p className="not-italic flex desktop:items-center desktop:font-[100] font-[100] text-[18px] desktop:text-3xl desktop:text-left text-black desktop:w-[50%] desktop:pr-[4%] desktop:border-r-2 pb-4 desktop:border-black desktop:min-h-[350px]">
+            <p
+              className={`not-italic flex desktop:items-center desktop:font-[100] font-[100]  desktop:text-left text-black desktop:w-[50%] desktop:pr-[4%] desktop:border-r-2 pb-4 desktop:border-black desktop:min-h-[350px] ${styles["paragraphe"]}`}
+            >
               {project[0].description}
             </p>
             <div className="flex flex-col desktop:min-h-[400px] min-h-[250px] justify-around desktop:justify-evenly desktop:w-[50%] w-full desktop:ml-[2%]">
               <div className="flex flex-row justify-between">
-                <p className="font-bold text-[18px] desktop:text-3xl text-[#0C26CD]">
+                <p
+                  className={`font-bold text-[#0C26CD] ${styles["paragraphe"]}`}
+                >
                   Year
                 </p>
-                <p className="not-italic  text-[18px] font-[100] desktop:text-3xl text-right text-black">
+                <p
+                  className={`not-italic font-[100] text-right text-black ${styles["paragraphe"]}`}
+                >
                   {project[0].year}
                 </p>
               </div>
               <div className="flex flex-row justify-between">
-                <p className="font-bold text-[18px] desktop:text-3xl text-[#0C26CD]">
+                <p
+                  className={`font-bold text-[#0C26CD] ${styles["paragraphe"]}`}
+                >
                   Client
                 </p>
-                <p className="not-italic font-[100] text-[18px] desktop:text-3xl text-right text-black">
+                <p
+                  className={`font-[100] text-right text-black" ${styles["paragraphe"]}`}
+                >
                   {project[0].client}
                 </p>
               </div>
               <div className="flex flex-row justify-between">
-                <p className="font-bold text-[18px] desktop:text-3xl text-[#0C26CD]">
+                <p
+                  className={`font-bold  text-[#0C26CD] ${styles["paragraphe"]}`}
+                >
                   Project
                 </p>
-                <p className="not-italic font-[100] text-[18px] desktop:text-3xl text-right text-black">
+                <p
+                  className={`not-italic font-[100]  text-right text-black ${styles["paragraphe"]}`}
+                >
                   {project[0].projectType}
                 </p>
               </div>
-              <div className="flex flex-row justify-between flex-wrap">
-                <p className="font-bold text-[18px] desktop:text-3xl text-[#0C26CD] mr-12">
+              <div className="flex flex-row justify-between ">
+                <p
+                  className={`font-bold  text-[#0C26CD] mr-12 ${styles["paragraphe"]}`}
+                >
                   Stack
                 </p>
-                <p className="not-italic font-[100] text-[18px] desktop:text-3xl text-right text-black">
+                <p
+                  className={`not-italic font-[100]  text-right text-black ${styles["paragraphe"]}`}
+                >
                   {project[0].stack}
                 </p>
               </div>

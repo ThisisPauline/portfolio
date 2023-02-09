@@ -1,4 +1,5 @@
-.linkWhite:after {
+@media screen and (min-width: 900px) {
+  .linkWhite:after {
     width: 100%;
     content: "";
     display: block;
@@ -23,6 +24,7 @@
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
     box-sizing: content-box;
+    
   }
   .linkBlack:hover:after {
     width: 100%;
@@ -39,12 +41,27 @@
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
     box-sizing: content-box;
+
+
   }
   .linkWhite:hover:after {
     width: 100%;
     left: 0;
     box-sizing: content-box;
   }
+
+}
+
+
+.linkWhite{
+          font-size: clamp(1.125rem, 0.8rem + 1.5vw, 1.875rem);
+
+}
+
+.linkBlack{
+  font-size: clamp(1.125rem, 0.8rem + 1.5vw, 1.875rem);
+
+}
 
   .donutTurn{
     position: relative;
@@ -91,10 +108,30 @@
     url("noise.svg");}
 
     .mainHeading{
-      font-size: clamp(4.375rem, 3.8125rem + 2.5vw, 6rem);
+      font-size: clamp(3.75rem, 3.8125rem + 2.5vw, 6rem);
     }
 
     .sub{
       font-size: clamp(1.25rem, 0.8173rem + 1.9231vw, 2.5rem);
     }
   
+    .h1{
+      font-size: clamp(2.5rem, 1.39rem + 4.8vw, 5rem);
+    }
+
+    .h2{
+      font-size: clamp(1.25rem, 0.971rem + 1.20vw, 1.875rem);
+    }
+
+    .number{
+      font-size: clamp(1rem, 0.89rem + 0.48vw, 1.25rem);
+    }
+
+    .paragraphe{
+      font-size: clamp(1.125rem, 0.8rem + 1.5vw, 1.875rem);
+    }
+
+
+    .paragrapheStack{
+  
+      }
