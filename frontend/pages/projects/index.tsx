@@ -13,6 +13,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Work() {
   const [work, setWork] = useState([]);
+  const [image, setImage] = useState(false);
+
+  const handleMouseEnter = () => {
+    setImage(true);
+  };
+  const handleMouseLeave = () => {
+    setImage(false);
+  };
 
   const URI = "http://localhost:5005/projects";
 
@@ -26,6 +34,8 @@ export default function Work() {
   }, []);
 
   if (work.length == 0) return <BounceLoader />;
+
+  console.log(work);
 
   return (
     <>
@@ -47,13 +57,25 @@ export default function Work() {
                     <div
                       className={`flex flex-col desktop:flex-row justify-between items-start desktop:items-center border-b-2 pb-6 pt-6 border-black ${styles["h2"]}`}
                     >
+                      {
+                        //TODO
+                        //{image ? (
+                        // <div>{project.id}</div>
+                        //) : (
+                        //  <div className="hidden" />
+                        //)}
+                      }
                       <div className="flex flex-row gap-3 items-center">
                         <Image src={arrowRight} alt="arrow" />
-                        <div className="text-bold  font-medium">
+                        <div
+                          className="text-bold  font-medium"
+                          onMouseEnter={handleMouseEnter}
+                          onMouseLeave={handleMouseLeave}
+                        >
                           {project.projectTag}
                         </div>
                       </div>
-                      <div className="desktop:ml-0 font-[100] ml-[36px]">
+                      <div className="desktop:ml-0 font-[100] text-right ml-[36px]">
                         {project.stack}
                       </div>
                     </div>
