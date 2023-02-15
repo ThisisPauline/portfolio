@@ -38,7 +38,7 @@ export default function Work() {
   console.log(work);
 
   return (
-    <>
+    <div className="h-screen">
       <Header />
       <div className="flex flex-col items-start justify-center min-h-screen desktop:mr-[60px] desktop:ml-[180px] mr-[26px] ml-[26px] mt-[150px] ">
         <div className="flex items-end justify-between w-full border-b-2 pb-4 border-black ">
@@ -87,6 +87,6 @@ export default function Work() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

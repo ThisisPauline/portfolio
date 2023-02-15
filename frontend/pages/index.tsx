@@ -72,7 +72,7 @@ export default function Home() {
               src={donutWhiteXL}
               alt="donut White Background"
               width={500}
-              className="w-full"
+              className=""
             />
           </div>
         </div>

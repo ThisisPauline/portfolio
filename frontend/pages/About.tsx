@@ -23,13 +23,14 @@ export default function About() {
           <p
             className={`mt-[8%] mb-[5%] desktop:mt-0 text-[18px] font-[100] desktop:text-3xl desktop:leading-9 flex-1 mr-[2%] ${styles["paragraphe"]}`}
           >
-            Born in Paris, I’ve lived in the south of Spain for the past four
-            years and am now looking to settle in Berlin. Adapting to living in
-            a foreign country gave me the skills to push myself outside of my
-            comfort zone. After pursuing my career in Publishing for five years,
-            I decided to embrace change again by retraining as a Full Stack Web
-            Developer. Now, I’m looking for a junior position as a Frontend
-            Developer as my passion lies in pixel perfect designs.{" "}
+            Born in Paris, I’ve lived in the sunny south of Spain for the past
+            four years. Adapting to life in a foreign country has taught me
+            valuable skills in resilience, adaptability, and cross-cultural
+            communication. After five years in the publishing industry, I felt
+            the urge to pursue a new challenge and decided to retrain as a Full
+            Stack Web Developer. I'm now eager to embark on the next phase of my
+            career as a Frontend Developer, as my true passion lies in crafting
+            visually stunning, pixel-perfect designs.
           </p>
           <div className="flex flex-1 justify-center items-center">
             <Image
