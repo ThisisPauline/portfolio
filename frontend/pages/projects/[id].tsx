@@ -10,10 +10,13 @@ import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
 import { BounceLoader } from "react-spinners";
 import styles from "../../styles/menu.module.scss";
+import ButtonInner from "@/components/ButtonInner";
+import ButtonBack from "@/components/ButtonBack";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function ProjectDetails() {
+  const [work, setWork] = useState([]);
   const router = useRouter();
   const { id } = router.query;
 
@@ -30,7 +33,19 @@ export default function ProjectDetails() {
       .then((data) => setProject(data));
   }, [id]);
 
+  const URI = "http://localhost:5005/projects";
+
+  useEffect(() => {
+    const source = axios.CancelToken.source();
+
+    axios
+      .get(URI, { cancelToken: source.token })
+      .then((response) => response.data)
+      .then((data) => setWork(data));
+  }, []);
+
   console.log(project);
+  console.log(work);
 
   useEffect(() => {
     if (photoScrollContainerRef.current == null) return;
@@ -46,7 +61,9 @@ export default function ProjectDetails() {
   }, [photoScrollContainerRef.current]);
 
   if (project.length == 0) return <BounceLoader />;
-
+  const prevProject = parseInt(project[1].id) - 1;
+  const nextProject = parseInt(project[1].id) + 1;
+  console.log(nextProject);
   return (
     <div className="w-screen">
       <Header />
@@ -172,6 +189,25 @@ export default function ProjectDetails() {
             </li>
           );
         })}
+      </div>
+      <div className="flex justify-between desktop:mx-[66px] mx-2 mb-10">
+        {project[1].id !== 1 ? (
+          <Link href={`/projects/${prevProject}`} className="flex-1 ">
+            <ButtonBack label="Previous project" />
+          </Link>
+        ) : (
+          <div></div>
+        )}
+        {project[1].id !== work.length ? (
+          <Link
+            href={`/projects/${nextProject}`}
+            className="flex-1 flex flex-end justify-end"
+          >
+            <ButtonInner label="Next project" />
+          </Link>
+        ) : (
+          ""
+        )}
       </div>
       <Footer />
     </div>

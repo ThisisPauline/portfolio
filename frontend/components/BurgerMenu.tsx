@@ -85,11 +85,7 @@ export default function BurgerMenu(props: MenuPropTypes) {
                     className="flex items-baseline"
                     onClick={handleOnClick}
                   >
-                    <p
-                      className={`text-[20px] font-[100] mr-5 ${styles["linkWhite"]}`}
-                    >
-                      04
-                    </p>
+                    <p className="text-[20px] font-[100] mr-5">04</p>
                     <p className="underline text-[50px] font-bold desktop:text-[80px] desktop:no-underline">
                       Contact
                     </p>

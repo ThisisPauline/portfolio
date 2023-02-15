@@ -9,9 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Contact() {
   return (
-    <div className="min-w-screen  ">
+    <div className="min-h-screen flex flex-col justify-between">
       <Header />
-      <div className="flex mt-[150px] flex-col items-start justify-start  min-h-screen desktop:mr-[60px] desktop:ml-[180px] mr-[26px] ml-[26px]">
+      <div className="flex mt-[150px] flex-col items-start justify-start   desktop:mr-[60px] desktop:ml-[180px] mr-[26px] ml-[26px]">
         <div className="flex items-end justify-between w-full border-b-2 pb-4 border-black ">
           <h1 className={`font-bold z-10 desktop:-mb-7 -mb-3 ${styles["h1"]}`}>
             Contact

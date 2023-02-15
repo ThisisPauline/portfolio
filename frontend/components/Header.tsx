@@ -23,13 +23,13 @@ export default function Header() {
       {menu ? (
         ""
       ) : (
-        <div className="desktop:mt-[10px] mt-1 flex items-center flex-row h-[100px] justify-between pl-[5px] desktop:pl-[18px] desktop:pr-[40px] pr-[20px] opacity-90 absolute top-0 left-0 w-screen z-10 desktop:h-[130px]">
+        <div className="desktop:mt-[10px] mt-1 flex items-center flex-row h-[80px] justify-between pl-[5px] desktop:pl-[18px] desktop:pr-[40px] pr-[20px] opacity-90 absolute top-0 left-0 w-screen z-10 desktop:h-[130px]">
           <Link href="/">
             <Image
               src={donutBlueBig}
               alt="logo"
               width={195}
-              className={`desktop:w-[195px] w-[100px] ${styles["donutHover"]}`}
+              className={`desktop:w-[195px] w-[80px] ${styles["donutHover"]}`}
             />
           </Link>
           <button
