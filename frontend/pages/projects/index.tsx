@@ -13,13 +13,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Work() {
   const [work, setWork] = useState([]);
-  const [image, setImage] = useState(false);
+  const [hoveredProject, setHoveredProject] = useState(null);
 
-  const handleMouseEnter = () => {
-    setImage(true);
+  const handleMouseEnter = (project) => {
+    setHoveredProject(project);
   };
   const handleMouseLeave = () => {
-    setImage(false);
+    setHoveredProject(null);
   };
 
   const URI = "http://localhost:5005/projects";
@@ -55,23 +55,22 @@ export default function Work() {
                 <li className="" key={project.id}>
                   <Link href={`/projects/${project.id}`}>
                     <div
-                      className={`flex flex-col desktop:flex-row justify-between items-start desktop:items-center border-b-2 pb-6 pt-6 border-black ${styles["h2"]}`}
+                      className={`project flex flex-col desktop:flex-row justify-between items-start desktop:items-center border-b-2 pb-6 pt-6 border-black ${styles["h2"]}`}
+                      onMouseEnter={() => handleMouseEnter(project)}
+                      onMouseLeave={handleMouseLeave}
                     >
-                      {
-                        //TODO
-                        //{image ? (
-                        // <div>{project.id}</div>
-                        //) : (
-                        //  <div className="hidden" />
-                        //)}
-                      }
+                      {hoveredProject === project && (
+                        <Image
+                          src={project.url}
+                          alt={project.projectTag}
+                          className="project-image"
+                          width={200}
+                          height={200}
+                        />
+                      )}
                       <div className="flex flex-row gap-3 items-center">
                         <Image src={arrowRight} alt="arrow" />
-                        <div
-                          className="text-bold  font-medium"
-                          onMouseEnter={handleMouseEnter}
-                          onMouseLeave={handleMouseLeave}
-                        >
+                        <div className="text-bold  font-medium">
                           {project.projectTag}
                         </div>
                       </div>
