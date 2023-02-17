@@ -1,12 +1,20 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@react-spring/types': ^9.6.1
   concurrently: ^7.6.0
+
+dependencies:
+  '@react-spring/types': 9.6.1
 
 devDependencies:
   concurrently: 7.6.0
 
 packages:
+
+  /@react-spring/types/9.6.1:
+    resolution: {integrity: sha512-POu8Mk0hIU3lRXB3bGIGe4VHIwwDsQyoD1F394OK7STTiX9w4dG3cTLljjYswkQN+hDSHRrj4O36kuVa7KPU8Q==}
+    dev: false
 
   /ansi-regex/5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}

@@ -1,8 +1,8 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import AnimatedCursor from "react-animated-cursor";
-import { useState, useEffect, CSSProperties } from "react";
-import { BounceLoader } from "react-spinners";
+import { useState, useEffect } from "react";
+import Loader from "../components/loader";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -15,31 +15,11 @@ export default function App({ Component, pageProps }: AppProps) {
     }, 1500);
   }, [loading]);
 
-  const override: CSSProperties = {
-    display: "flex",
-    justifyItems: "center",
-    alignItems: "center",
-    marginTop: "300px",
-    marginLeft: "40%",
-    borderColor: "#0C26CD",
-    width: "100vw",
-    height: "100vh",
-    zIndex: "500",
-    overflowY: "hidden",
-  };
-
-  let [color, setColor] = useState("#0C26CD");
   return (
     <>
+      <title>Pauline | Frontend developer</title>
       {!domLoaded ? (
-        <BounceLoader
-          color={color}
-          loading={loading}
-          cssOverride={override}
-          size={150}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-        />
+        ""
       ) : (
         <AnimatedCursor
           color="222, 145, 81"
@@ -55,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       )}
 
-      <Component {...pageProps} />
+      {!domLoaded ? <Loader /> : <Component {...pageProps} />}
     </>
   );
 }

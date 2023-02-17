@@ -31,7 +31,7 @@ export default function Home() {
           <h1
             className={`desktop:hidden pl-[30px]  font-bold z-10  -mb-4 text-[60px] ${styles["mainHeading"]}`}
           >
-            I'm
+            I&apos;m
           </h1>
           <h1
             className={`desktop:hidden pl-[30px] text-[#0C26CD] font-bold z-10  -mb-4  ${styles["mainHeading"]}`}
