@@ -13,13 +13,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Work() {
   const [work, setWork] = useState([]);
-  const [image, setImage] = useState(false);
+  const [hoveredProject, setHoveredProject] = useState(null);
 
-  const handleMouseEnter = () => {
-    setImage(true);
+  const handleMouseEnter = (project) => {
+    setHoveredProject(project);
   };
   const handleMouseLeave = () => {
-    setImage(false);
+    setHoveredProject(null);
   };
 
   const URI = "http://localhost:5005/projects";
@@ -33,7 +33,7 @@ export default function Work() {
       .then((data) => setWork(data));
   }, []);
 
-  if (work.length == 0) return <BounceLoader />;
+  if (work.length == 0) return;
 
   console.log(work);
 
@@ -52,26 +52,29 @@ export default function Work() {
           <ul>
             {work.map((project) => {
               return (
-                <li className="" key={project.id}>
-                  <Link href={`/projects/${project.id}`}>
+                <li className="" key={project.projectSpecs_id}>
+                  <Link href={`/projects/${project.projectSpecs_id}`}>
                     <div
-                      className={`flex flex-col desktop:flex-row justify-between items-start desktop:items-center border-b-2 pb-6 pt-6 border-black ${styles["h2"]}`}
+                      className={`project flex flex-col desktop:flex-row justify-between items-start desktop:items-center border-b-2 pb-6 pt-6 border-black ${
+                        styles["h2"]
+                      } ${
+                        hoveredProject === project ? `desktop:h-[350px]` : ""
+                      }`}
+                      onMouseEnter={() => handleMouseEnter(project)}
+                      onMouseLeave={handleMouseLeave}
                     >
-                      {
-                        //TODO
-                        //{image ? (
-                        // <div>{project.id}</div>
-                        //) : (
-                        //  <div className="hidden" />
-                        //)}
-                      }
-                      <div className="flex flex-row gap-3 items-center">
+                      {hoveredProject === project && (
+                        <Image
+                          src={project.url}
+                          alt={project.projectTag}
+                          className=" ml-[5%] w-[2OOpx] desktop:flex desktop:absolute desktop:project-image desktop:opacity-70 desktop:-rotate-12 hidden"
+                          width={350}
+                          height={450}
+                        />
+                      )}
+                      <div className="flex flex-row gap-3 items-center z-10 ">
                         <Image src={arrowRight} alt="arrow" />
-                        <div
-                          className="text-bold  font-medium"
-                          onMouseEnter={handleMouseEnter}
-                          onMouseLeave={handleMouseLeave}
-                        >
+                        <div className="text-bold  font-medium ">
                           {project.projectTag}
                         </div>
                       </div>

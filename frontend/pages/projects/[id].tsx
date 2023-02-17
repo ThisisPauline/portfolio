@@ -8,7 +8,7 @@ import Image from "next/image";
 import ButtonOut from "@/components/ButtonOut";
 import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
-import { BounceLoader } from "react-spinners";
+
 import styles from "../../styles/menu.module.scss";
 import ButtonInner from "@/components/ButtonInner";
 import ButtonBack from "@/components/ButtonBack";
@@ -60,7 +60,7 @@ export default function ProjectDetails() {
     return () => container.removeEventListener("wheel", wheelListener);
   }, [photoScrollContainerRef.current]);
 
-  if (project.length == 0) return <BounceLoader />;
+  if (project.length == 0) return;
   const prevProject = parseInt(project[1].id) - 1;
   const nextProject = parseInt(project[1].id) + 1;
   console.log(nextProject);
@@ -74,7 +74,7 @@ export default function ProjectDetails() {
             width={30000}
             height={30000}
             alt="project image"
-            className="w-screen desktop:h-[600px] object-cover"
+            className="w-screen object-cover desktop:h-[800px]"
           />
         </div>
         <div className="desktop:mr-[60px] desktop:ml-[188px] mr-[26px] ml-[26px]">
