@@ -9,11 +9,11 @@ const DonutLoader = () => {
     loop: { reverse: true },
     to: { opacity: 1, y: 0 },
     from: { opacity: 0, y: 50 },
-    config: { tension: 200, friction: 10, duration: 1500 },
+    config: { tension: 50, friction: 10, duration: 700 },
   });
 
   return (
-    <div className="flex flex-col justify-around items-center min-h-screen">
+    <div className="flex flex-col justify-evenly items-center min-h-screen">
       <Image
         src={donutBlueBig}
         alt="Donut loader"
@@ -21,8 +21,8 @@ const DonutLoader = () => {
         width={300}
         height={300}
       />
-      <animated.p style={textProps} className="text-center -mt-[50px]">
-        Coding donuts...
+      <animated.p style={textProps} className="text-center -mt-[100px]">
+        Dotting the i&apos;s and crossing the t&apos;s
       </animated.p>
     </div>
   );

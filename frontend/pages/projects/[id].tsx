@@ -8,6 +8,9 @@ import Image from "next/image";
 import ButtonOut from "@/components/ButtonOut";
 import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import styles from "../../styles/menu.module.scss";
 import ButtonInner from "@/components/ButtonInner";
@@ -21,7 +24,6 @@ export default function ProjectDetails() {
   const { id } = router.query;
 
   const [project, setProject] = useState([]);
-  const photoScrollContainerRef = useRef(null);
 
   const backendURL = "http://localhost:5005";
 
@@ -46,19 +48,6 @@ export default function ProjectDetails() {
 
   console.log(project);
   console.log(work);
-
-  useEffect(() => {
-    if (photoScrollContainerRef.current == null) return;
-    const container = photoScrollContainerRef.current;
-    const wheelListener = (e) => {
-      e.preventDefault();
-      container.scrollBy(e.deltaY * 0.5, 0);
-    };
-    container.addEventListener("wheel", wheelListener, {
-      passive: false,
-    });
-    return () => container.removeEventListener("wheel", wheelListener);
-  }, [photoScrollContainerRef.current]);
 
   if (project.length == 0) return;
   const prevProject = parseInt(project[1].id) - 1;
@@ -170,27 +159,58 @@ export default function ProjectDetails() {
           </div>
         </div>
       </div>
-      <div
-        ref={photoScrollContainerRef}
-        className="flex desktop:justify-center flex-col gap-5 desktop:flex-row mb-[5%] desktop:h-[450px] desktop:overflow-x-auto  desktop:overflow-y-hidden "
-      >
+      <div className="hidden desktop:block">
+        <div className="overflow-x-scroll scrollbar-hidden">
+          <Slider
+            infinite={true}
+            slidesToShow={1}
+            slidesToScroll={1}
+            centerMode={true}
+            centerPadding={"0"}
+            speed={500}
+            dots={false}
+            arrows={false}
+            variableWidth={true}
+            className="w-full"
+          >
+            {project.slice(1, project.length).map((image) => {
+              return (
+                <div className="list-none" key={image.index}>
+                  <div className="desktop:w-[600px] desktop:h-[450px] desktop:snap-center">
+                    <Image
+                      src={image.url}
+                      alt="image project"
+                      width={660}
+                      height={450}
+                      className="desktop:object-cover desktop:h-full"
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
+      </div>
+
+      <div className="flex flex-col w-screen desktop:hidden">
         {project.slice(1, project.length).map((image) => {
           return (
-            <li className="list-none" key={image.index}>
-              <div className=" desktop:w-[600px] desktop:h-[450px]  desktop:snap-center">
+            <div className="list-none" key={image.index}>
+              <div className="w-screen m-0">
                 <Image
                   src={image.url}
                   alt="image project"
-                  width={660}
+                  width={860}
                   height={450}
-                  className="desktop:object-cover  desktop:h-full"
+                  className="desktop:object-cover desktop:h-full"
                 />
               </div>
-            </li>
+            </div>
           );
         })}
       </div>
-      <div className="flex justify-between desktop:mx-[66px] mx-2 mb-10">
+
+      <div className="flex justify-between desktop:mx-[66px] mx-2 my-10">
         {project[1].id !== 1 ? (
           <Link href={`/projects/${prevProject}`} className="flex-1 ">
             <ButtonBack label="Previous project" />
