@@ -22,14 +22,14 @@ export default function App({ Component, pageProps }: AppProps) {
         ""
       ) : (
         <AnimatedCursor
-          color="222, 145, 81"
+          color="246, 142, 95"
           innerSize={10}
           outerSize={40}
           innerScale={1}
           outerScale={1.9}
           outerAlpha={0}
           outerStyle={{
-            border: "2px solid #de9151",
+            border: "2px solid #F68E5F",
           }}
           hasBlendMode={true}
         />
