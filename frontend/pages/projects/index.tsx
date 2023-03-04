@@ -66,13 +66,19 @@ export default function Work() {
                       />
                       {project === hoveredProject && (
                         <div className="absolute h-full bottom-0 left-0 right-0 px-8 py-8 flex justify-end flex-col bg-[#0C26CD] transition-opacity duration-300 opacity-100">
-                          <p className="text-white font-bold text-[40px] ">
+                          <p
+                            className={`${styles["projectName"]} text-white font-bold `}
+                          >
                             {project.projectName}
                           </p>
-                          <p className="text-white font-bold text-[20px]">
+                          <p
+                            className={`${styles["projectTag"]} text-white font-bold text-[20px] `}
+                          >
                             {project.projectTag}
                           </p>
-                          <p className="text-white font-thin text-[20px]">
+                          <p
+                            className={`${styles["projectStack"]} text-white font-thin text-[20px]  `}
+                          >
                             {project.stack}
                           </p>
                         </div>

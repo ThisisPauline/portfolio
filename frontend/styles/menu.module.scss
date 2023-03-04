@@ -40,6 +40,31 @@
     box-sizing: content-box;
   }
 
+  .projectName{
+    font-size: clamp(1.25rem, -0.328rem + 2.7624vw, 3.125rem);
+  }
+
+  .projectTag{
+    font-size: clamp(0.9375rem, 0.1485rem + 1.3812vw, 1.875rem);
+  }
+
+  .projectStack{
+    font-size: clamp(0.9375rem, 0.1485rem + 1.3812vw, 1.875rem);
+  }
+
+}
+
+
+.projectName{
+  font-size: clamp(1.25rem, 1.25rem + 3.2823vw, 3.125rem);
+}
+
+.projectTag{
+  font-size: clamp(0.9375rem, 0.9375rem + 2.1882vw, 2.1875rem);
+}
+
+.projectStack{
+  font-size: clamp(0.9375rem, 0.9375rem + 2.1882vw, 2.1875rem);
 }
 
 
