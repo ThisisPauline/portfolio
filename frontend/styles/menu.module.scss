@@ -4,7 +4,7 @@
     content: "";
     display: block;
     height: 2px;
-    background: white;
+    background: #0C26CD;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
     box-sizing: content-box;
@@ -15,17 +15,7 @@
     box-sizing: content-box;
   }
 
-  .linkWhite:after {
-    width: 100%;
-    content: "";
-    display: block;
-    height: 2px;
-    background: #0C26CD;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-    box-sizing: content-box;
-    
-  }
+
   .linkBlack:hover:after {
     width: 100%;
     left: 0;
@@ -55,7 +45,7 @@
 
 .linkWhite{
           font-size: clamp(1.125rem, 0.8rem + 1.5vw, 1.875rem);
-
+max-width: fit-content;
 }
 
 .linkBlack{
