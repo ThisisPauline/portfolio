@@ -77,7 +77,7 @@ export default function ProjectDetails() {
 
           <div className="flex desktop:flex-row flex-col-reverse gap-10 desktop:gap-0 justify-between items-center desktop:min-h-[600px]">
             <p
-              className={`not-italic flex desktop:items-center desktop:font-[100] font-[100]  desktop:text-left text-black desktop:w-[50%] desktop:pr-[4%] desktop:border-r-2 pb-4 desktop:border-black desktop:min-h-[350px] ${styles["paragraphe"]}`}
+              className={`not-italic mt-4 flex desktop:items-center desktop:font-[100] font-[100]  desktop:text-left text-black desktop:w-[50%] desktop:pr-[4%] desktop:border-r-2 pb-4 desktop:border-black desktop:min-h-[350px] ${styles["paragraphe"]}`}
             >
               {project[0].description}
             </p>
