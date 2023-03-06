@@ -45,7 +45,7 @@
   }
 
   .projectTag{
-    font-size: clamp(0.9375rem, 0.1485rem + 1.3812vw, 1.875rem);
+    font-size: clamp(0.8rem, 0.1485rem + 1.3812vw, 1.875rem);
   }
 
   .projectStack{
@@ -56,15 +56,15 @@
 
 
 .projectName{
-  font-size: clamp(1.25rem, 1.25rem + 3.2823vw, 3.125rem);
+  font-size: clamp(1.25rem, -0.328rem + 3vw, 3.125rem);
 }
 
 .projectTag{
-  font-size: clamp(0.9375rem, 0.9375rem + 2.1882vw, 2.1875rem);
+  font-size: clamp(0.8rem, 0.1485rem + 1.3812vw, 1.875rem);
 }
 
 .projectStack{
-  font-size: clamp(0.9375rem, 0.9375rem + 2.1882vw, 2.1875rem);
+  font-size: clamp(0.8rem, 0.1485rem + 1.3812vw, 1.875rem);
 }
 
 

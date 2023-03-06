@@ -72,12 +72,12 @@ export default function Work() {
                             {project.projectName}
                           </p>
                           <p
-                            className={`${styles["projectTag"]} text-white font-bold text-[20px] `}
+                            className={`${styles["projectTag"]} text-white font-bold  `}
                           >
                             {project.projectTag}
                           </p>
                           <p
-                            className={`${styles["projectStack"]} text-white font-thin text-[20px]  `}
+                            className={`${styles["projectStack"]} text-white font-thin `}
                           >
                             {project.stack}
                           </p>
