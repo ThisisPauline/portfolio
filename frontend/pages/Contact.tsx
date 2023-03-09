@@ -20,11 +20,11 @@ export default function Contact() {
         </div>
         <div className="flex desktop:flex-row flex-col desktop:items-end justify-around desktop:justify-between w-full pb-4 border-b-2 border-black h-[140px]">
           <h2 className={`font-medium  ${styles["sub"]}`}>Mail</h2>
-          <Link href="mailto:kraus.pauline@gmail.com">
+          <Link href="mailto:hello@paulinekraus.com">
             <p
               className={`font-[100] desktop:w-[460px] ${styles["paragraphe"]}`}
             >
-              kraus.pauline@gmail.com
+              hello@paulinekraus.com
             </p>
           </Link>
         </div>
