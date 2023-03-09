@@ -1,0 +1,152 @@
+@media screen and (min-width: 900px) {
+  .linkWhite:after {
+    width: 100%;
+    content: "";
+    display: block;
+    height: 2px;
+    background: #0C26CD;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    box-sizing: content-box;
+  }
+  .linkWhite:hover:after {
+    width: 100%;
+    left: 0;
+    box-sizing: content-box;
+  }
+
+
+  .linkBlack:hover:after {
+    width: 100%;
+    left: 0;
+    box-sizing: content-box;
+  }
+
+  .linkBlack:after {
+    width: 100%;
+    content: "";
+    display: block;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    box-sizing: content-box;
+
+
+  }
+  .linkWhite:hover:after {
+    width: 100%;
+    left: 0;
+    box-sizing: content-box;
+  }
+
+  .projectName{
+    font-size: clamp(1.25rem, -0.328rem + 2.7624vw, 3.125rem);
+  }
+
+  .projectTag{
+    font-size: clamp(0.8rem, 0.1485rem + 1.3812vw, 1.875rem);
+  }
+
+  .projectStack{
+    font-size: clamp(0.9375rem, 0.1485rem + 1.3812vw, 1.875rem);
+  }
+
+}
+
+
+.projectName{
+  font-size: clamp(1.25rem, -0.328rem + 3vw, 3.125rem);
+}
+
+.projectTag{
+  font-size: clamp(0.8rem, 0.1485rem + 1.3812vw, 1.875rem);
+}
+
+.projectStack{
+  font-size: clamp(0.8rem, 0.1485rem + 1.3812vw, 1.875rem);
+}
+
+
+.linkWhite{
+          font-size: clamp(1.125rem, 0.8rem + 1.5vw, 1.875rem);
+max-width: fit-content;
+}
+
+.linkBlack{
+  font-size: clamp(1.125rem, 0.8rem + 1.5vw, 1.875rem);
+
+}
+
+  .donutTurn{
+    position: relative;
+    
+    animation: move 5s 0s infinite cubic-bezier(.98,.98,.83,.67) alternate-reverse;
+  }
+
+  @keyframes move {
+    0%  {    
+      transform:rotate(45deg);
+    }
+    25%  {
+      transform:rotate(135deg);
+    }
+    50%  {
+      transform:rotate(180deg);
+    }
+    75%  { 
+        transform:rotate(315deg);
+    }
+    100% {  
+  
+      transform:rotate(404deg);
+    }
+  }
+
+  .donutHover:hover{
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform: rotate3d(2, 1, 1, 1deg)
+      matrix3d(1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 10, 10, 0, 1.1);
+  }
+  
+
+  .burger{
+  min-height: 100vh;
+  background-repeat: repeat;
+
+  background-image: radial-gradient(
+      at 77% 27%,
+      hsla(231, 88%, 92%, 0.4) 0px,
+      transparent 100%
+    ),
+    url("noise.svg");}
+
+    .mainHeading{
+      font-size: clamp(3.75rem, 3.8125rem + 2.5vw, 6rem);
+    }
+
+    .sub{
+      font-size: clamp(1.25rem, 0.8173rem + 1.9231vw, 2.5rem);
+    }
+  
+    .h1{
+      font-size: clamp(2.5rem, 1.39rem + 4.8vw, 5rem);
+    }
+
+    .h2{
+      font-size: clamp(1.25rem, 0.971rem + 1.20vw, 1.875rem);
+    }
+
+    .number{
+      font-size: clamp(1rem, 0.89rem + 0.48vw, 1.25rem);
+    }
+
+    .paragraphe{
+      font-size: clamp(1.125rem, 0.8rem + 1.5vw, 1.875rem);
+    }
+
+
+
+ 
+    
