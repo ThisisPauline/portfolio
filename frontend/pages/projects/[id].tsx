@@ -18,12 +18,26 @@ import ButtonBack from "@/components/ButtonBack";
 
 const inter = Inter({ subsets: ["latin"] });
 
+interface ProjectData {
+  id: number;
+  projectName: string;
+  description: string;
+  year: string;
+  client: string;
+  projectType: string;
+  stack: string;
+  url: string;
+  siteLink: string | null;
+  repoLink: string | null;
+  index: number;
+}
+
 export default function ProjectDetails() {
   const [work, setWork] = useState([]);
   const router = useRouter();
   const { id } = router.query;
 
-  const [project, setProject] = useState([]);
+  const [project, setProject] = useState<ProjectData[]>([]);
 
   const backendURL = "http://localhost:5005";
 
@@ -50,8 +64,8 @@ export default function ProjectDetails() {
   console.log(work);
 
   if (project.length == 0) return;
-  const prevProject = parseInt(project[1].id) - 1;
-  const nextProject = parseInt(project[1].id) + 1;
+  const prevProject = Number(project[1].id) - 1;
+  const nextProject = +project[1].id + 1;
   console.log(nextProject);
   return (
     <div className="w-screen">
@@ -137,7 +151,7 @@ export default function ProjectDetails() {
             <div className="flex-1">
               {project[1].siteLink !== null ? (
                 <div>
-                  <Link target="_blank" href={project[0].siteLink}>
+                  <Link target="_blank" href={project[0].siteLink as string}>
                     <ButtonOut label="View the website" />
                   </Link>
                 </div>
@@ -148,7 +162,7 @@ export default function ProjectDetails() {
             <div className="flex-1">
               {project[1].repoLink !== null ? (
                 <div>
-                  <Link target="_blank" href={project[0].repoLink}>
+                  <Link target="_blank" href={project[0].repoLink as string}>
                     <ButtonOut label="View the repo" />
                   </Link>
                 </div>

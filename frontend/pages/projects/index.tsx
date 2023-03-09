@@ -11,17 +11,24 @@ import styles from "../../styles/menu.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Work() {
-  const [work, setWork] = useState([]);
-  const [hoveredProject, setHoveredProject] = useState(null);
+interface Project {
+  projectSpecs_id: string;
+  url: string;
+  projectTag: string;
+  projectName: string;
+  stack: string;
+}
 
-  const handleMouseEnter = (project) => {
+export default function Work() {
+  const [work, setWork] = useState<Project[]>([]);
+  const [hoveredProject, setHoveredProject] = useState<Project | null>(null);
+
+  const handleMouseEnter = (project: Project) => {
     setHoveredProject(project);
   };
   const handleMouseLeave = () => {
     setHoveredProject(null);
   };
-
   const URI = "http://localhost:5005/projects";
 
   useEffect(() => {

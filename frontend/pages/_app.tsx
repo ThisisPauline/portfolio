@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import AnimatedCursor from "react-animated-cursor";
 import { useState, useEffect } from "react";
-import Loader from "../components/loader";
+import Loader from "@/components/Loader";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [domLoaded, setDomLoaded] = useState(false);
