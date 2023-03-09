@@ -11,6 +11,10 @@ import { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {
+  MouseParallaxContainer,
+  MouseParallaxChild,
+} from "react-parallax-mouse";
 
 import styles from "../../styles/menu.module.scss";
 import ButtonInner from "@/components/ButtonInner";
@@ -53,6 +57,7 @@ export default function ProjectDetails() {
   const prevProject = parseInt(project[1].id) - 1;
   const nextProject = parseInt(project[1].id) + 1;
   console.log(nextProject);
+
   return (
     <div className="w-screen">
       <Header />
@@ -175,7 +180,7 @@ export default function ProjectDetails() {
           >
             {project.slice(1, project.length).map((image) => {
               return (
-                <div className="list-none" key={image.index}>
+                <div className={`${styles["box"]} list-none`} key={image.index}>
                   <div className="desktop:w-[600px] desktop:h-[450px] desktop:snap-center">
                     <Image
                       src={image.url}

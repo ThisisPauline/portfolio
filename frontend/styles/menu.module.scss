@@ -52,6 +52,23 @@
     font-size: clamp(0.9375rem, 0.1485rem + 1.3812vw, 1.875rem);
   }
 
+  .box {
+    animation: bounce 2.5s infinite;
+    animation-fill-mode:both;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(-30px);
+    }
+    60% {
+      transform: translateX(-15px);
+    }
+  }
+
 }
 
 
