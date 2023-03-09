@@ -60,13 +60,10 @@ export default function ProjectDetails() {
       .then((data) => setWork(data));
   }, []);
 
-  console.log(project);
-  console.log(work);
-
   if (project.length == 0) return;
   const prevProject = Number(project[1].id) - 1;
   const nextProject = +project[1].id + 1;
-  console.log(nextProject);
+
   return (
     <div className="w-screen">
       <Header />

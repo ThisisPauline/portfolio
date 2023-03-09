@@ -40,8 +40,6 @@ export default function Work() {
       .then((data) => setWork(data));
   }, []);
 
-  console.log(work);
-
   return (
     <div className="">
       <Header />
