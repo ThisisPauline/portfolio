@@ -1,5 +1,0 @@
----
-deployment :
-  tasks:
-    - export DEPLOYPATH=/home/krpa6847/paulinekraus.com/
-    - /bin/cp -R * $DEPLOYPATH
