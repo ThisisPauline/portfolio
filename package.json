@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "concurrently -n backend,frontend -c green,blue -t \"HH:mm:ss\" -p \"[{time} • {name}]\t\" \"npm --prefix ./backend run dev\" \"npm --prefix ./frontend run dev\"",
     "test": "echo \"Error: no test script, create one to run tests across your packages\" && exit 1",
-    "build": "echo \"Error: build script missing, you can define one to build your packages\" && exit 1",
+    "build": "\"npm --prefix build\"",
     "start": "echo \"Error: start script missing, you can define one to run built packages\" && exit 1"
   },
   "keywords": [
