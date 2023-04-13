@@ -5,19 +5,20 @@
   "scripts": {
     "dev": "concurrently -n backend,frontend -c green,blue -t \"HH:mm:ss\" -p \"[{time} • {name}]\t\" \"npm --prefix ./backend run dev\" \"npm --prefix ./frontend run dev\"",
     "test": "echo \"Error: no test script, create one to run tests across your packages\" && exit 1",
-    "build": "concurrently -n backend,frontend -c green,blue -t \"HH:mm:ss\" -p \"[{time} • {name}]\t\" \"npm --prefix ./backend run build\" \"npm --prefix ./frontend run build\"",
-    "start": "echo \"Error: start script missing, you can define one to run built packages\" && exit 1"
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+        "start": "echo \"Error: start script missing, you can define one to run built packages\" && exit 1"
   },
   "keywords": [
     "start",
     "scripts",
-    "build",
     "dev",
     "script",
     "concurrently",
     "fullstack"
   ],
-  "author": "David Alexander Pfeiffer (davidmc971)",
+  "author": "Pauline Kraus",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^7.6.0"
