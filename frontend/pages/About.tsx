@@ -28,9 +28,9 @@ export default function About() {
             valuable skills in resilience, adaptability, and cross-cultural
             communication. After five years in the publishing industry, I felt
             the urge to pursue a new challenge and decided to retrain as a Full
-            Stack Web Developer. I'm now eager to embark on the next phase of my
-            career as a Frontend Developer, as my true passion lies in crafting
-            visually stunning, pixel-perfect designs.
+            Stack Web Developer. I&apos;m now eager to embark on the next phase
+            of my career as a Frontend Developer, as my true passion lies in
+            crafting visually stunning, pixel-perfect designs.
           </p>
           <div className="flex flex-1 justify-center items-center">
             <Image
