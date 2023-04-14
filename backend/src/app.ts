@@ -5,7 +5,7 @@ const projectsRouter = require("./projects/projectsRouter");
 
 import dotenv from "dotenv";
 dotenv.config();
-const EXPRESS_PORT = parseInt(process.env.EXPRESS_PORT ?? "5005", 10);
+const EXPRESS_PORT = parseInt(process.env.PORT ?? "5005", 10);
 
 import database from "./database";
 

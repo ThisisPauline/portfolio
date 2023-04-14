@@ -21,7 +21,7 @@ export default function Home() {
           <h1
             className={`pl-[30px] desktop:ml-0  desktop:text-[96px] font-bold z-10 desktop:-mb-7 -mb-4 text-[60px] ${styles["mainHeading"]}`}
           >
-            Hi!
+            Hi,
           </h1>
           <h1
             className={`hidden desktop:inline pl-[30px] desktop:ml-0   desktop:font-bold desktop:z-10 desktopmt-0 ${styles["mainHeading"]}`}
@@ -41,7 +41,7 @@ export default function Home() {
           <p
             className={`pl-[30px] desktop:ml-0 text-left  desktop:w-[40%] font-[100] desktop:text-center mb-[44px] z-10  w-[100%] ${styles["sub"]}`}
           >
-            A Frontend&#160;Web Developer keen on&#160;UI&#160;and&#160;design.
+            A Frontend&#160;Web Developer keen on&#160;UI&#160;and&#160;design
           </p>
           <div className="pl-[30px] desktop:ml-0 flex desktop:flex-row flex-col desktop:items-center justify-around desktop:justify-center gap-5 desktop:gap-[10%] w-full z-10">
             <Link href="/projects">
