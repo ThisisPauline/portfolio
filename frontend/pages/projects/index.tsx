@@ -29,7 +29,7 @@ export default function Work() {
   const handleMouseLeave = () => {
     setHoveredProject(null);
   };
-  const URI = "https://enigmatic-reaches-92520.herokuapp.com/";
+  const URI = "http://localhost:5005/projects";
 
   useEffect(() => {
     const source = axios.CancelToken.source();
