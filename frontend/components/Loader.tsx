@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring, animated } from "@react-spring/web";
+import { useSpring, animated } from "react-spring";
 import Image from "next/image";
 import donutBlueBig from "../assets/donut-blue-big.png";
 import styles from "../styles/menu.module.scss";
