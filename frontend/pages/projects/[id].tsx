@@ -39,17 +39,17 @@ export default function ProjectDetails() {
 
   const [project, setProject] = useState<ProjectData[]>([]);
 
-  const backendURL = "http://localhost:5005";
+  const APIURL: any = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     if (id == null) return;
     axios
-      .get(`${backendURL}/projects/${id}`)
+      .get(`${APIURL}/projects/${id}`)
       .then((response) => response.data)
       .then((data) => setProject(data));
   }, [id]);
 
-  const URI = "http://localhost:5005/projects";
+  const URI = `${APIURL}/projects`;
 
   useEffect(() => {
     const source = axios.CancelToken.source();
