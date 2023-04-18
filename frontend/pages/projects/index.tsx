@@ -29,13 +29,13 @@ export default function Work() {
   const handleMouseLeave = () => {
     setHoveredProject(null);
   };
-  const URI = "http://localhost:5005/projects";
+  const APIURL: any = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     const source = axios.CancelToken.source();
 
     axios
-      .get(URI, { cancelToken: source.token })
+      .get(`${APIURL}/projects`, { cancelToken: source.token })
       .then((response) => response.data)
       .then((data) => setWork(data));
   }, []);
