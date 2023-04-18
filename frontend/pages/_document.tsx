@@ -12,7 +12,7 @@ export default function Document() {
         <meta property="og:title" content="Pauline | Frontend developer" />
         <meta
           property="og:description"
-          content="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect design. Check my work out! "
+          content="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
         />
       </Head>
       <body>
