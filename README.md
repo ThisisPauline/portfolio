@@ -1,8 +1,12 @@
-# Pauline's Portfolio #
+# Pauline's Portfolio
 
-![alt text](https://i.imgur.com/G59gLeE.jpg)
+![Portfolio](https://i.imgur.com/yCR2tJD.jpg)
 
-This is a personal portfolio website designed to showcase my personal projects, skills, and experience and built in Next.js, TypeScript and Express for the backend.
+> <a href="https://portfolio-thisispauline.vercel.app/"> Visit the website </a>
+
+## Introduction
+
+This is a personal portfolio website designed to showcase my personal projects, skills, and experience and built in Next.js, TypeScript and Express for the backend and MySql for the database. 
 
 ## Installation ##
 Root of the repo contains the dev script and placeholders for potentially useful scripts:
