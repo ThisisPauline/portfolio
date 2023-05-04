@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import AnimatedCursor from "react-animated-cursor";
@@ -34,8 +35,13 @@ export default function App({ Component, pageProps }: AppProps) {
           hasBlendMode={true}
         />
       )}
-
-      {!domLoaded ? <Loader /> : <Component {...pageProps} />}
+      {!domLoaded ? (
+        <Loader />
+      ) : (
+        <div>
+          <Component {...pageProps} /> <Analytics />
+        </div>
+      )}
     </>
   );
 }
