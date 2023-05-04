@@ -14,6 +14,11 @@ export default function Document() {
           property="og:description"
           content="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
         />
+        <meta
+          name="description"
+          content="Hi, I'm Pauline - a frontend developer passionate about crafting pixel-perfect designs. Browse my portfolio to see the responsive websites and user interfaces I've created. Let's work together to bring your vision to life!"
+          key="desc"
+        />
       </Head>
       <body>
         <Main />
