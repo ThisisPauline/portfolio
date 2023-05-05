@@ -4,12 +4,14 @@ specifiers:
   '@react-spring/types': ^9.6.1
   '@vercel/analytics': ^1.0.1
   concurrently: ^7.6.0
+  next-sitemap: ^4.0.9
   react: ^18.2.0
   react-spring: ^9.7.1
 
 dependencies:
   '@react-spring/types': 9.6.1
   '@vercel/analytics': 1.0.1
+  next-sitemap: 4.0.9
   react: 18.2.0
   react-spring: 9.7.1_react@18.2.0
 
@@ -17,6 +19,10 @@ devDependencies:
   concurrently: 7.6.0
 
 packages:
+
+  /@corex/deepmerge/4.0.43:
+    resolution: {integrity: sha512-N8uEMrMPL0cu/bdboEWpQYb/0i2K5Qn8eCsxzOmxSggJbbQte7ljMRoXm917AbntqTGOzdTu+vP3KOOzoC70HQ==}
+    dev: false
 
   /@react-spring/animated/9.7.2_react@18.2.0:
     resolution: {integrity: sha512-ipvleJ99ipqlnHkz5qhSsgf/ny5aW0ZG8Q+/2Oj9cI7LCc7COdnrSO6V/v8MAX3JOoQNzfz6dye2s5Pt5jGaIA==}
@@ -233,6 +239,22 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+    dev: false
+
+  /minimist/1.2.8:
+    resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
+    dev: false
+
+  /next-sitemap/4.0.9:
+    resolution: {integrity: sha512-8pbcEe4vrmgGEc3beVbrSqd8mTQ9lCsGxP+AOlArrGmeLkKD4TbSR41R2unQHHSTkBG8cQ/7gjKkdLBlzwtu6g==}
+    engines: {node: '>=14.18'}
+    hasBin: true
+    peerDependencies:
+      '@next/env': '*'
+      next: '*'
+    dependencies:
+      '@corex/deepmerge': 4.0.43
+      minimist: 1.2.8
     dev: false
 
   /react-spring/9.7.1_react@18.2.0:
