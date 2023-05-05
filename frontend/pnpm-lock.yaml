@@ -14,6 +14,7 @@ specifiers:
   eslint: 8.32.0
   eslint-config-next: 13.1.2
   next: 13.1.2
+  next-sitemap: ^4.0.9
   postcss: ^8.4.21
   react: 18.2.0
   react-animated-cursor: ^2.5.2
@@ -38,6 +39,7 @@ dependencies:
   eslint: 8.32.0
   eslint-config-next: 13.1.2_7uibuqfxkfaozanbtbziikiqje
   next: 13.1.2_5mhhrw5dq6gnbuirj2awdzvyuu
+  next-sitemap: 4.0.9_next@13.1.2
   react: 18.2.0
   react-animated-cursor: 2.5.2_biqbaboplfbrettd7655fr4n2y
   react-dom: 18.2.0_react@18.2.0
@@ -59,6 +61,10 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
+    dev: false
+
+  /@corex/deepmerge/4.0.43:
+    resolution: {integrity: sha512-N8uEMrMPL0cu/bdboEWpQYb/0i2K5Qn8eCsxzOmxSggJbbQte7ljMRoXm917AbntqTGOzdTu+vP3KOOzoC70HQ==}
     dev: false
 
   /@eslint/eslintrc/1.4.1:
@@ -1942,6 +1948,10 @@ packages:
   /minimist/1.2.7:
     resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
 
+  /minimist/1.2.8:
+    resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
+    dev: false
+
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: false
@@ -1957,6 +1967,19 @@ packages:
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+    dev: false
+
+  /next-sitemap/4.0.9_next@13.1.2:
+    resolution: {integrity: sha512-8pbcEe4vrmgGEc3beVbrSqd8mTQ9lCsGxP+AOlArrGmeLkKD4TbSR41R2unQHHSTkBG8cQ/7gjKkdLBlzwtu6g==}
+    engines: {node: '>=14.18'}
+    hasBin: true
+    peerDependencies:
+      '@next/env': '*'
+      next: '*'
+    dependencies:
+      '@corex/deepmerge': 4.0.43
+      minimist: 1.2.8
+      next: 13.1.2_5mhhrw5dq6gnbuirj2awdzvyuu
     dev: false
 
   /next/13.1.2_5mhhrw5dq6gnbuirj2awdzvyuu:
