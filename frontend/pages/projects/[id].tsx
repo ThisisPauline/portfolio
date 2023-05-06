@@ -72,6 +72,7 @@ export default function ProjectDetails() {
         description={`Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my project ${project[0].projectName} built in ${project[0].stack}`}
         ogTitle={`Pauline kraus | Frontend developer | ${project[0].projectName}`}
         ogType=""
+        ogDescription={`Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my project ${project[0].projectName} built in ${project[0].stack}`}
         ogUrl=""
         ogImage={project[0].url}
         title={`Pauline kraus | Frontend developer | ${project[0].projectName}`}

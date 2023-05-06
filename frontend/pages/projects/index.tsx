@@ -48,6 +48,7 @@ export default function Work() {
         description="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
         ogTitle="Pauline kraus | Frontend developer | Projects"
         ogType=""
+        ogDescription="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
         ogUrl=""
         ogImage="https://i.imgur.com/yCR2tJD.jpg"
         title="Pauline kraus | Frontend developer | Projects"

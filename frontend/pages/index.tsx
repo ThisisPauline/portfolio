@@ -19,6 +19,7 @@ export default function Home() {
       <Meta
         keywords="pauline kraus web developer contact, pauline kraus dev contact, pauline kraus frontend"
         description="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
+        ogDescription="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
         ogTitle="Pauline kraus | Frontend developer"
         ogType=""
         ogUrl=""

@@ -8,6 +8,7 @@ export interface MetaPropTypes {
   ogType: string;
   ogUrl: string;
   ogImage: string;
+  ogDescription: string;
 }
 
 export default function Meta(props: MetaPropTypes) {
@@ -23,6 +24,7 @@ export default function Meta(props: MetaPropTypes) {
       <meta property="og:type" content={props.ogType} />
       <meta property="og:url" content={props.ogUrl} />
       <meta property="og:image" content={props.ogImage} />
+      <meta property="og:description" content={props.ogDescription} />
       <meta charSet="utf-8"></meta>
       <link rel="icon" href="/favicon.ico"></link>
       <title>{props.title}</title>
