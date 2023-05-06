@@ -5,12 +5,22 @@ import profilePicture from "../assets/profilePicture.png";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import styles from "../styles/menu.module.scss";
+import Meta from "@/components/meta";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function About() {
   return (
     <div>
+      <Meta
+        keywords="pauline kraus web developer, pauline kraus dev, pauline kraus frontend"
+        description="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
+        ogTitle="Pauline kraus | Frontend developer | About"
+        ogType=""
+        ogUrl=""
+        ogImage="https://i.imgur.com/yCR2tJD.jpg"
+        title="Pauline kraus | Frontend developer | About"
+      />
       <Header />
       <div className="flex flex-col items-start justify-center min-h-screen mt-[150px] desktop:mr-[60px] desktop:ml-[180px] mr-[26px] ml-[26px]">
         <div className="flex items-end justify-between w-full border-b-2 pb-4 border-black ">
