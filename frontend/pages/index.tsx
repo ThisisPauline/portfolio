@@ -47,7 +47,7 @@ export default function Home() {
             <Link href="/projects">
               <ButtonBlack label="See my projects" />
             </Link>
-            <Link href="/about">
+            <Link href="/About">
               <ButtonBlack label="About me" />
             </Link>
           </div>
