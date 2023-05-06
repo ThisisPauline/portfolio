@@ -4,7 +4,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Meta from "@/components/meta";
+import Meta from "@/components/Meta";
 
 import Image from "next/image";
 

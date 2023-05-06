@@ -5,7 +5,7 @@ import profilePicture from "../assets/profilePicture.png";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import styles from "../styles/menu.module.scss";
-import Meta from "@/components/meta";
+import Meta from "@/components/Meta";
 
 const inter = Inter({ subsets: ["latin"] });
 

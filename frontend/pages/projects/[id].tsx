@@ -11,7 +11,7 @@ import { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Meta from "@/components/meta";
+import Meta from "@/components/Meta";
 
 import styles from "../../styles/menu.module.scss";
 import ButtonInner from "@/components/ButtonInner";
