@@ -69,7 +69,7 @@ export default function BurgerMenu(props: MenuPropTypes) {
                 </div>
                 <div className={styles.linkWhite}>
                   <Link
-                    href="/about"
+                    href="/aboutme"
                     className="flex items-baseline"
                     onClick={handleOnClick}
                   >
@@ -81,7 +81,7 @@ export default function BurgerMenu(props: MenuPropTypes) {
                 </div>
                 <div className={styles.linkWhite}>
                   <Link
-                    href="/contact"
+                    href="/contactme"
                     className="flex items-baseline"
                     onClick={handleOnClick}
                   >
