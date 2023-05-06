@@ -11,7 +11,7 @@ import { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Meta from "@/components/Meta";
+import Head from "next/head";
 
 import styles from "../../styles/menu.module.scss";
 import ButtonInner from "@/components/ButtonInner";
@@ -67,16 +67,28 @@ export default function ProjectDetails() {
 
   return (
     <>
-      <Meta
-        keywords={`pauline kraus web developer, pauline kraus dev, pauline kraus frontend ${project[0].projectName}`}
-        description={`Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my project ${project[0].projectName} built in ${project[0].stack}`}
-        ogTitle={`Pauline kraus | Frontend developer | ${project[0].projectName}`}
-        ogType=""
-        ogDescription={`Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my project ${project[0].projectName} built in ${project[0].stack}`}
-        ogUrl=""
-        ogImage={project[0].url}
-        title={`Pauline kraus | Frontend developer | ${project[0].projectName}`}
-      />
+      <Head>
+        <meta
+          name="keywords"
+          content={`pauline kraus web developer, pauline kraus dev, pauline kraus frontend ${project[0].projectName}`}
+        ></meta>
+        <meta
+          name="description"
+          content={`Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my project ${project[0].projectName} built in ${project[0].stack}`}
+        ></meta>
+        <meta
+          property="og:title"
+          content={`Pauline kraus | Frontend developer | ${project[0].projectName}`}
+        />
+        <meta property="og:type" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content={project[0].url} />
+        <meta
+          property="og:description"
+          content={`Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my project ${project[0].projectName} built in ${project[0].stack}`}
+        />
+      </Head>
+
       <div className="w-screen">
         <Header />
         <div className="desktop:mt-[200px] mt-[150px] w-screen">

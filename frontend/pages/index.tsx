@@ -9,23 +9,34 @@ import {
   MouseParallaxChild,
 } from "react-parallax-mouse";
 import styles from "../styles/menu.module.scss";
-import Meta from "@/components/Meta";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      <Meta
-        keywords="pauline kraus web developer contact, pauline kraus dev contact, pauline kraus frontend"
-        description="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
-        ogDescription="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
-        ogTitle="Pauline kraus | Frontend developer"
-        ogType=""
-        ogUrl=""
-        ogImage="https://i.imgur.com/yCR2tJD.jpg"
-        title="Pauline kraus | Frontend developer"
-      />
+      <Head>
+        <meta
+          name="keywords"
+          content="pauline kraus web developer contact, pauline kraus dev contact, pauline kraus frontend"
+        ></meta>
+        <meta
+          name="description"
+          content="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
+        ></meta>
+        <meta
+          property="og:title"
+          content="Pauline kraus | Frontend developer"
+        />
+        <meta property="og:type" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="https://i.imgur.com/yCR2tJD.jpg" />
+        <meta
+          property="og:description"
+          content="Hi, I'm Pauline, a frontend dev with a passion for pixel-perfect designs. Check out my work!"
+        />
+      </Head>
       <div className="flex flex-col">
         <Header />
         <div>

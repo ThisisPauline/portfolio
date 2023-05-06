@@ -4,23 +4,33 @@ import Link from "next/link";
 import ButtonOut from "@/components/ButtonOut";
 import Footer from "@/components/Footer";
 import styles from "../styles/menu.module.scss";
-import Meta from "@/components/Meta";
-
+import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Contact() {
   return (
     <>
-      <Meta
-        keywords="pauline kraus web developer contact, pauline kraus dev contact, pauline kraus frontend"
-        description="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
-        ogDescription="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
-        ogTitle="Pauline kraus | Frontend developer | Contact"
-        ogType=""
-        ogUrl=""
-        ogImage="https://i.imgur.com/yCR2tJD.jpg"
-        title="Pauline kraus | Frontend developer | Contact"
-      />
+      <Head>
+        <meta
+          name="keywords"
+          content="pauline kraus web developer contact, pauline kraus dev contact, pauline kraus frontend"
+        ></meta>
+        <meta
+          name="description"
+          content="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! and contact me! "
+        ></meta>
+        <meta
+          property="og:title"
+          content="Pauline kraus | Frontend developer | Contact"
+        />
+        <meta property="og:type" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="https://i.imgur.com/yCR2tJD.jpg" />
+        <meta
+          property="og:description"
+          content="Hi, I'm Pauline, a frontend dev with a passion for pixel-perfect designs. Check out my work and contact me!"
+        />
+      </Head>
       <div className="min-h-screen flex flex-col justify-between">
         <Header />
         <div className="flex mt-[150px] flex-col items-start justify-start   desktop:mr-[60px] desktop:ml-[180px] mr-[26px] ml-[26px]">

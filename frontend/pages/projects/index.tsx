@@ -4,7 +4,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Meta from "@/components/Meta";
+import Head from "next/head";
 
 import Image from "next/image";
 
@@ -43,16 +43,27 @@ export default function Work() {
 
   return (
     <>
-      <Meta
-        keywords="pauline kraus web developer, pauline kraus dev, pauline kraus frontend"
-        description="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
-        ogTitle="Pauline kraus | Frontend developer | Projects"
-        ogType=""
-        ogDescription="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! "
-        ogUrl=""
-        ogImage="https://i.imgur.com/yCR2tJD.jpg"
-        title="Pauline kraus | Frontend developer | Projects"
-      />
+      <Head>
+        <meta
+          name="keywords"
+          content="pauline kraus web developer, pauline kraus dev, pauline kraus frontend"
+        ></meta>
+        <meta
+          name="description"
+          content="Hi, I'm Pauline, a frontend developer with a passion for pixel perfect designs. Check my work out! and contact me! "
+        ></meta>
+        <meta
+          property="og:title"
+          content="Pauline kraus | Frontend developer | Projects"
+        />
+        <meta property="og:type" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="https://i.imgur.com/yCR2tJD.jpg" />
+        <meta
+          property="og:description"
+          content="Hi, I'm Pauline, a frontend dev with a passion for pixel-perfect designs. Check out my work and contact me!"
+        />
+      </Head>
 
       <div className="">
         <Header />
