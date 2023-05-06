@@ -8,8 +8,6 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-        <meta property="og:image" content="https://i.imgur.com/yCR2tJD.jpg" />
-        <meta property="og:title" content="Pauline | Frontend developer" />
       </Head>
       <body>
         <Main />
